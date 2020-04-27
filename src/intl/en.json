@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "contact": "Contact",
+    "portfolio": "Portfolio",
+    "skills": "Skills"
+  },
+
+  "hero": {
+    "cta": "Let's meet",
+    "greeting": "Bonjour",
+    "iam": "I am",
+
+    "job": {
+      "designer": "Web Designer",
+      "developer": "Web Developer"
+    }
+  },
+
+  "about": {
+    "desc": ""
+  },
+
+  "usps": {
+    "heading": "",
+
+    "fast": {
+      "desc": "",
+      "heading": "Fast"
+    },
+
+    "intuitive": {
+      "desc": "",
+      "heading": "Intuitive"
+    },
+
+    "responsive": {
+      "desc": "",
+      "heading": "Responsive"
+    }
+  },
+
+  "portfolio": {
+    "heading": ""
+  },
+
+  "footer": {
+    "callout": {
+      "heading": ""
+    },
+
+    "copy": {
+      "desc": "Michal Hromas &copy;2020"
+    },
+
+    "main": {
+      "heading": "I am here for you!",
+
+      "contacts": {
+        "cta": "Call",
+        "email": "michalhromas1@gmail.com",
+        "linkedin": "linkedin.com/michal-hromas",
+        "phone": "+420 606 385 691",
+        "rate": "from £23.5/hour"
+      },
+
+      "form": {
+        "email": "E-mail",
+        "heading": "Leave me a message",
+        "message": "Message",
+        "name": "Name / Company",
+        "phone": "Phone",
+        "submit": "Submit"
+      }
+    }
+  },
+
+  "notifications": {
+    "available": "I am currently <strong>accepting</strong> new clients"
+  }
+}

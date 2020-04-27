@@ -1,14 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Image from "../components/image"
+import { useIntl } from "gatsby-plugin-intl"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <div>
-    <SEO title="Home" />
-    Home
-  </div>
-)
+const IndexPage = () => {
+  const intl = useIntl()
+  return (
+    <div>
+      <SEO title="Home" />
+      {intl.formatMessage({ id: "nav.contact" })}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: intl.formatMessage({ id: "about.desc" }),
+        }}
+      ></div>
+    </div>
+  )
+}
 
 export default IndexPage
