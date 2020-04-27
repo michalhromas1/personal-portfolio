@@ -1,0 +1,37 @@
+// --- Base Colors ---
+$c-yellow: #FECB2F;
+
+$c-green: #4EC677;
+$c-green--d1: #4EC677;
+
+$c-black--l1: #0F0F0F;
+$c-black--l2: #1F1F1F;
+$c-black--l3: #292929;
+$c-black--l4: #535461;
+$c-black--l5: #555555;
+
+$c-white: #FFFFFF;
+$c-white--d1: #F6F8F9;
+$c-white--d2: #FAFAFA;
+$c-white--d3: #EBEFF0;
+$c-white--d4: #E8ECED;
+$c-white--d5: #E1E5E6;
+
+
+// --- Semantic Colors ---
+$c-theme: $c-yellow;
+$c-primary: $c-black--l4;
+$c-secondary: $c-white--d2;
+
+$c-nav: $c-white--d5;
+$c-section-headings: $c-white--d3;
+$c-hero-heading: $c-white--d4;
+$c-copy: $c-black--l5;
+
+$c-body-bg: $c-white;
+$c-notification-bg: $c-green;
+$c-notification-close-bg: $c-green--d1;
+$c-skills-bg: $c-white--d1;
+$c-callout-bg: $c-black--l3;
+$c-footer-bg: $c-black--l2;
+$c-copy-bg: $c-black--l1;
