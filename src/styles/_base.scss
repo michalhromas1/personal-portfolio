@@ -21,8 +21,24 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.btn,
+button,
+input[type="submit"] {
   font-family: $f-headings;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+.btn,
+button,
+input[type="submit"] {
+  cursor: pointer;
 }
 
 section {
@@ -32,4 +48,24 @@ section {
 .container {
   width: 100%;
   padding: 0 2.8rem;
+}
+
+.btn {
+  border: 2px solid $c-theme;
+  color: $c-theme;
+  width: 100%;
+  display: flex;
+  padding: .8rem 0 1.3rem;
+  transition: $t-btn;
+
+  &__text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover {
+    color: $c-white;
+    border-color: $c-theme;
+    background-color: $c-theme;
+  }
 }
