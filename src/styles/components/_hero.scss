@@ -6,9 +6,9 @@
   &__content {}
 
   &__person-wrapper {
-    @include fluid-size(width, 25.6rem, 84.8rem);
-    @include fluid-size(margin-top, 2.6rem, 6rem);
-    @include fluid-size(margin-bottom, 2.9rem, 5.7rem);
+    @include fluid-size(width, 25.6rem, $brp-1);
+    @include fluid-size(margin-top, 2.6rem, $brp-1);
+    @include fluid-size(margin-bottom, 2.9rem, $brp-1);
     margin-left: auto;
     margin-right: auto;
   }
@@ -26,18 +26,18 @@
 .main-title {
 
   &__greeting {
-    @include fluid-fs($fs-main-title__greeting--min, $fs-main-title__greeting--max);
-    @include fluid-size(margin-bottom, .8rem, 3.6rem); // -1.3rem
+    @include fluid-fs($fs-main-title__greeting--min, $brp-1);
+    @include fluid-size(margin-bottom, .8rem, $brp-1); // -1.3rem
     color: $c-hero-greeting;
   }
 
   &__name {
-    @include fluid-size(width, 31.3rem, 66.4rem);
+    @include fluid-size(width, 31.3rem, $brp-1);
   }
 
   &__jobs {
-    @include fluid-fs($fs-main-title__jobs--min, $fs-main-title__jobs--max);
-    @include fluid-size(margin-top, 1.6rem, 4.4rem); // -.5rem
+    @include fluid-fs($fs-main-title__jobs--min, $brp-1);
+    @include fluid-size(margin-top, 1.6rem, $brp-1); // -.5rem
     color: $c-primary;
     display: flex;
     justify-content: center;
@@ -45,12 +45,12 @@
   }
 
   &__jobs-divider {
-    @include fluid-size(width, .5rem, 1.3rem);
-    @include fluid-size(height, .5rem, 1.3rem);
-    @include fluid-size(margin-left, .9rem, 2.1rem);
-    @include fluid-size(margin-right, .9rem, 2.1rem);
-    @include fluid-size(margin-top, -.5rem, -.8rem);
+    @include fluid-size(width, .5rem, $brp-1);
+    //@include fluid-size(height, .5rem, $brp-1);
+    @include fluid-size(margin-left, .9rem, $brp-1);
+    @include fluid-size(margin-right, .9rem, $brp-1);
+    /*@include fluid-size(margin-top, -.5rem, $brp-1);
     border-radius: 50%;
-    background: $c-primary;
+    background: $c-primary;*/
   }
 }
