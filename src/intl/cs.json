@@ -7,8 +7,9 @@
 
   "hero": {
     "cta": "Domluvit si schůzku",
-    "greeting": "Zdravíčko",
-    "iam": "Já jsem",
+    "greeting": "Zdravíčko, já jsem",
+    "name--alt": "Michal Hromas",
+    "person--alt": "Progámator",
 
     "job": {
       "designer": "Web Designer",

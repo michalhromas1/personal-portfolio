@@ -7,8 +7,9 @@
 
   "hero": {
     "cta": "Let's meet",
-    "greeting": "Bonjour",
-    "iam": "I am",
+    "greeting": "Bonjour, I am",
+    "name--alt": "Michal Hromas",
+    "person--alt": "Programmer",
 
     "job": {
       "designer": "Web Designer",

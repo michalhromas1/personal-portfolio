@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="476" height="459" viewBox="0 0 476 459">
+  <g id="Logo" transform="translate(-1642 -1135)">
+    <g id="Initials">
+      <path id="H" d="M14933.776-2773.505v-458.99h78.1v186.875h83.787V-3232.5h78.117v459h-78.117v-206.543h-83.8V-2773.5Z" transform="translate(-13055.776 4367.502)" fill="#fecb2f"/>
+      <path id="M" d="M14681.379-2731.6v-307h68.867l30.7,219.742h.874l30.721-219.735h68.839v306.979h-45.606v-232.433h-.885l-35.095,232.446h-40.337l-35.1-232.438h-.89v232.43Z" transform="translate(-13039.379 4325.597)" fill="#fecb2f"/>
+    </g>
+    <g id="Planets" transform="translate(852 44.095)">
+      <g id="Other">
+        <circle id="Mercury" cx="24" cy="24" r="24" transform="translate(790 1090.906)" fill="#fecb2f"/>
+        <circle id="Mars" cx="24" cy="24" r="24" transform="translate(790 1166.906)" fill="#fecb2f"/>
+        <circle id="Venus" cx="24" cy="24" r="24" transform="translate(866 1090.906)" fill="#fecb2f"/>
+      </g>
+      <circle id="Jupiter" cx="24" cy="24" r="24" transform="translate(866 1166.906)" fill="#fd962f"/>
+      <circle id="Earth" cx="24" cy="24" r="24" transform="translate(942 1090.906)" fill="#6f869f"/>
+    </g>
+  </g>
+</svg>
