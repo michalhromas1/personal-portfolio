@@ -1,0 +1,7 @@
+// --- Transitions ---
+$t-btn-duration: 150ms;
+$t-btn-func: ease-in-out;
+
+$t-btn: background-color $t-btn-duration $t-btn-func,
+color $t-btn-duration $t-btn-func,
+border-color $t-btn-duration $t-btn-func;

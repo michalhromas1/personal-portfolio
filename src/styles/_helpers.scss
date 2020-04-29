@@ -1,0 +1,36 @@
+// --- Breakpoints ---
+$brp-fluid--min: 375px;
+
+
+// --- Functions ---
+@function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
+  @return (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
+}
+
+@function get-fluid-size-max-breakpoint($max-size-in-rems, $fluid-size-in-vw) {
+  @return (($max-size-in-rems / 1rem) / ($fluid-size-in-vw / 1vw) * 1000) * 1px;
+}
+
+
+// --- Mixins ---
+@mixin fluid-size($property, $min-size-in-rems, $max-size-in-rems, $min-size-related-viewport-width-in-px: $brp-fluid--min) {
+  $size--fluid: get-fluid-size($min-size-in-rems, $min-size-related-viewport-width-in-px);
+
+  #{$property}: $size--fluid;
+
+  @if $property==width or $property==height {
+    max-#{$property}: $max-size-in-rems;
+  }
+
+  @else {
+    $breakpoint: get-fluid-size-max-breakpoint($max-size-in-rems, $size--fluid);
+
+    @media screen and (min-width: $breakpoint) {
+      #{$property}: $max-size-in-rems;
+    }
+  }
+}
+
+@mixin fluid-fs($min-fs-in-rems, $max-fs-in-rems, $min-fs-related-viewport-width-in-px: $brp-fluid--min) {
+  @include fluid-size(font-size, $min-fs-in-rems, $max-fs-in-rems, $min-fs-related-viewport-width-in-px);
+}
