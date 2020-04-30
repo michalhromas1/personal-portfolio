@@ -1,43 +1,44 @@
 .hero {
   text-align: center;
   height: 100vh;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &__content {}
 
   &__person-wrapper {
-    @include fluid-size(width, 25.6rem, 84.8rem);
-    @include fluid-size(margin-top, 2.6rem, 6rem);
-    @include fluid-size(margin-bottom, 2.9rem, 5.7rem);
+    @include fluid-size(width, 25.6rem, $brp-1);
+    @include fluid-size(margin-top, 2.6rem, $brp-1);
+    @include fluid-size(margin-bottom, 2.9rem, $brp-1);
     margin-left: auto;
     margin-right: auto;
   }
 
   &__button {
-    font-size: $fs-hero__btn;
-
-    .btn__text {
-      margin-top: .4rem;
-      margin-bottom: -.6rem;
-    }
+    @include fluid-fs($fs-hero__btn, $brp-1);
+    @include fluid-size(width, 31rem, $brp-1);
+    padding-top: get-em(1.3rem, $fs-hero__btn);
+    padding-bottom: get-em(.8rem, $fs-hero__btn); // -.5rem
+    border-width: get-em(.2rem, $fs-hero__btn);
   }
 }
 
 .main-title {
 
   &__greeting {
-    @include fluid-fs($fs-main-title__greeting--min, $fs-main-title__greeting--max);
-    @include fluid-size(margin-bottom, .8rem, 3.6rem); // -1.3rem
+    @include fluid-fs($fs-main-title__greeting--min, $brp-1);
+    margin-bottom: get-em(.8rem, $fs-main-title__greeting--min);
     color: $c-hero-greeting;
   }
 
   &__name {
-    @include fluid-size(width, 31.3rem, 66.4rem);
+    @include fluid-size(width, 31rem, $brp-1);
   }
 
   &__jobs {
-    @include fluid-fs($fs-main-title__jobs--min, $fs-main-title__jobs--max);
-    @include fluid-size(margin-top, 1.6rem, 4.4rem); // -.5rem
+    @include fluid-fs($fs-main-title__jobs--min, $brp-1);
+    margin-top: get-em(1.6rem, $fs-main-title__jobs--min);
     color: $c-primary;
     display: flex;
     justify-content: center;
@@ -45,12 +46,12 @@
   }
 
   &__jobs-divider {
-    @include fluid-size(width, .5rem, 1.3rem);
-    @include fluid-size(height, .5rem, 1.3rem);
-    @include fluid-size(margin-left, .9rem, 2.1rem);
-    @include fluid-size(margin-right, .9rem, 2.1rem);
-    @include fluid-size(margin-top, -.5rem, -.8rem);
-    border-radius: 50%;
-    background: $c-primary;
+    $size: get-em(.5rem, $fs-main-title__jobs--min);
+    width: $size;
+    height: $size;
+    margin: -.4rem get-em(.9rem, $fs-main-title__jobs--min) 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
 }

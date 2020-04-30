@@ -13,7 +13,8 @@
 
     "job": {
       "designer": "Web Designer",
-      "developer": "Web Developer"
+      "developer": "Web Developer",
+      "divider--alt": "Puntík"
     }
   },
 
