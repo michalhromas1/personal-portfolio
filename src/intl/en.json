@@ -25,19 +25,22 @@
   "usps": {
     "heading": "",
 
-    "fast": {
+    "1": {
       "desc": "",
-      "heading": "Fast"
+      "heading": "Fast",
+      "icon--alt": "A rocket"
     },
 
-    "intuitive": {
+    "2": {
       "desc": "",
-      "heading": "Intuitive"
+      "heading": "Intuitive",
+      "icon--alt": "A lightbulb"
     },
 
-    "responsive": {
+    "3": {
       "desc": "",
-      "heading": "Responsive"
+      "heading": "Responsive",
+      "icon--alt": "A smartphone"
     }
   },
 

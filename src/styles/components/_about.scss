@@ -1,10 +1,10 @@
 .about {
   @include fluid-fs($fs-about, $brp-1);
   @include curved-edge;
+  line-height: get-em(3.2rem, $fs-about);
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   margin-top: -2.5rem;
-  line-height: get-em(3.2rem, $fs-about);
   background: $c-theme;
   text-align: center;
   color: $c-secondary;

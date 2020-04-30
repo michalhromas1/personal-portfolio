@@ -1,6 +1,7 @@
 import React from "react"
 import Hero from "./../components/sections/hero"
 import About from "./../components/sections/about"
+import Usps from "./../components/sections/usps"
 import "../styles/styles.scss"
 //import SEO from "../components/seo"
 
@@ -15,6 +16,7 @@ const IndexPage = () => {
       ></div> */}
       <Hero />
       <About />
+      <Usps />
     </div>
   )
 }

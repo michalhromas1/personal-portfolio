@@ -25,19 +25,22 @@
   "usps": {
     "heading": "Jaké tvořím weby",
 
-    "fast": {
+    "1": {
       "desc": "Na ultrarychlém načítání stránek a zajištěním toho, aby se nezasekávaly, si dávám opravdu záležet",
-      "heading": "Rychlé"
+      "heading": "Rychlé",
+      "icon--alt": "Raketa"
     },
 
-    "intuitive": {
+    "2": {
       "desc": "Vždy hledám ten nejlepší kompromis mezi pěknou grafikou webu a dobrou čitelností jeho obsahu",
-      "heading": "Intuitivní"
+      "heading": "Intuitivní",
+      "icon--alt": "Žárovka"
     },
 
-    "responsive": {
+    "3": {
       "desc": "Tvořím weby takovým způsobem, aby vypadaly skvěle na počítačích, mobilech i tabletech",
-      "heading": "Responzivní"
+      "heading": "Responzivní",
+      "icon--alt": "Smartphone"
     }
   },
 
