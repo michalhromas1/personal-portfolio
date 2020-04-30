@@ -1,3 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-  <circle id="Circle_spacing_16px_" data-name="Circle (spacing 16px)" cx="6.5" cy="6.5" r="6.5" fill="#535461"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+<circle cx="6.5" cy="6.5" r="6.5" fill="#535461" data-name="Circle (spacing 16px)"/>
 </svg>

@@ -47,21 +47,21 @@ section {
 
 .container {
   width: 100%;
-  padding: 0 2.8rem;
+  padding: 0 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
-  border: 2px solid $c-theme;
+  border-style: solid;
+  border-color: $c-theme;
   color: $c-theme;
-  width: 100%;
   display: flex;
-  padding: .8rem 0 1.3rem;
   transition: $t-btn;
-
-  &__text {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover {
     color: $c-white;

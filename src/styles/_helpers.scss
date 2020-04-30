@@ -5,11 +5,43 @@ $brp-1: 500px;
 
 // --- Functions ---
 @function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
-  @return (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
+  $result: (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
+  @return floor-to-precision($result);
 }
 
 @function get-fluid-size-max-breakpoint($max-size-in-rems, $fluid-size-in-vw) {
-  @return (($max-size-in-rems / 1rem) / ($fluid-size-in-vw / 1vw) * 1000) * 1px;
+  $result: (($max-size-in-rems / 1rem) / ($fluid-size-in-vw / 1vw) * 1000) * 1px;
+  @return floor-to-precision($result);
+}
+
+@function get-em($desired-value-in-rem, $related-fs-in-rem) {
+  $result: ($desired-value-in-rem / $related-fs-in-rem) * 1em;
+  @return floor-to-precision($result);
+}
+
+@function floor-to-precision($number, $precision: 3) {
+  @if $precision < 1 {
+    @return floor($number);
+  }
+
+  $multiplier: pow(10, $precision);
+  @return floor($number * $multiplier) / $multiplier;
+}
+
+@function pow($base, $exponent) {
+  $value: 1;
+
+  @if $exponent < 0 {
+    @return $base;
+  }
+
+  @else if $exponent !=0 {
+    @for $i from 0 to $exponent {
+      $value: $value * $base;
+    }
+  }
+
+  @return $value;
 }
 
 
@@ -28,7 +60,7 @@ $brp-1: 500px;
   }
 
   @media screen and (min-width: $to-in-px) {
-    #{$property}: (($to-in-px / 1px) * ($size--fluid / 1vw) / 1000) * 1rem;
+    #{$property}: floor-to-precision((($to-in-px / 1px) * ($size--fluid / 1vw) / 1000) * 1rem);
   }
 }
 
