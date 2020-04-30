@@ -1,5 +1,6 @@
 // --- Breakpoints ---
-$brp-fluid--min: 375px;
+$brp-fluid--base: 375px;
+$brp-1: 500px;
 
 
 // --- Functions ---
@@ -13,24 +14,24 @@ $brp-fluid--min: 375px;
 
 
 // --- Mixins ---
-@mixin fluid-size($property, $min-size-in-rems, $max-size-in-rems, $min-size-related-viewport-width-in-px: $brp-fluid--min) {
-  $size--fluid: get-fluid-size($min-size-in-rems, $min-size-related-viewport-width-in-px);
+@mixin fluid-size($property, $init-size-in-rem, $to-in-px, $from-in-px: $brp-fluid--base) {
+  $size--fluid: get-fluid-size($init-size-in-rem, $from-in-px);
 
-  #{$property}: $size--fluid;
-
-  @if $property==width or $property==height {
-    max-#{$property}: $max-size-in-rems;
+  @if $brp-fluid--base>=$from-in-px {
+    #{$property}: $size--fluid;
   }
 
   @else {
-    $breakpoint: get-fluid-size-max-breakpoint($max-size-in-rems, $size--fluid);
-
-    @media screen and (min-width: $breakpoint) {
-      #{$property}: $max-size-in-rems;
+    @media screen and (min-width: $from-in-px) {
+      #{$property}: $size--fluid;
     }
+  }
+
+  @media screen and (min-width: $to-in-px) {
+    #{$property}: (($to-in-px / 1px) * ($size--fluid / 1vw) / 1000) * 1rem;
   }
 }
 
-@mixin fluid-fs($min-fs-in-rems, $max-fs-in-rems, $min-fs-related-viewport-width-in-px: $brp-fluid--min) {
-  @include fluid-size(font-size, $min-fs-in-rems, $max-fs-in-rems, $min-fs-related-viewport-width-in-px);
+@mixin fluid-fs($init-fs-in-rem, $to-in-px, $from-in-px: $brp-fluid--base) {
+  @include fluid-size(font-size, $init-fs-in-rem, $to-in-px, $from-in-px);
 }

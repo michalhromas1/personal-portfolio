@@ -2,6 +2,7 @@ import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import Name from "./../../images/svg/name.svg"
 import Person from "./../../images/svg/person.svg"
+import Dot from "./../../images/svg/dot.svg"
 
 const Hero = () => {
   const intl = useIntl()
@@ -33,7 +34,9 @@ const Hero = () => {
               <div className="main-title__job main-title__job--left">
                 {intl.formatMessage({ id: "hero.job.developer" })}
               </div>
-              <div className="main-title__jobs-divider"></div>
+              <div className="main-title__jobs-divider">
+                <img src={Dot} />
+              </div>
               <div className="main-title__job main-title__job--right">
                 {intl.formatMessage({ id: "hero.job.designer" })}
               </div>
