@@ -17,7 +17,7 @@
 
   &__button {
     @include fluid-fs($fs-hero__btn, $brp-1);
-    @include fluid-size(width, 31rem, $brp-1);
+    @include fluid-size(width, $minw-brp-fluid--base, $brp-1);
     padding-top: get-em(1.3rem, $fs-hero__btn);
     padding-bottom: get-em(.8rem, $fs-hero__btn); // -.5rem
     border-width: get-em(.2rem, $fs-hero__btn);
@@ -33,7 +33,7 @@
   }
 
   &__name {
-    @include fluid-size(width, 31rem, $brp-1);
+    @include fluid-size(width, $minw-brp-fluid--base, $brp-1);
   }
 
   &__jobs {

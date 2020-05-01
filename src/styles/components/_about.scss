@@ -1,0 +1,16 @@
+.about {
+  @include fluid-fs($fs-about, $brp-1);
+  @include curved-edge;
+  line-height: get-em(3.2rem, $fs-about);
+  padding-top: get-em(2.3rem, $fs-about); // -.7rem
+  padding-bottom: get-em(2.1rem, $fs-about); // -.9rem
+  margin-top: -2rem;
+  background: $c-theme;
+  text-align: center;
+  color: $c-secondary;
+
+  &__text {
+    max-width: 120rem;
+    margin: auto;
+  }
+}

@@ -3,6 +3,10 @@ $brp-fluid--base: 375px;
 $brp-1: 500px;
 
 
+// --- Breakpoint Element Min Widths ---
+$minw-brp-fluid--base: 31rem;
+
+
 // --- Functions ---
 @function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
   $result: (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
@@ -66,4 +70,9 @@ $brp-1: 500px;
 
 @mixin fluid-fs($init-fs-in-rem, $to-in-px, $from-in-px: $brp-fluid--base) {
   @include fluid-size(font-size, $init-fs-in-rem, $to-in-px, $from-in-px);
+}
+
+@mixin curved-edge {
+  border-top-left-radius: 50% 1.2%;
+  border-top-right-radius: 50% 1.2%;
 }
