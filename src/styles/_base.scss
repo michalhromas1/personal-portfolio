@@ -13,7 +13,6 @@ img {
 
 body {
   @include fluid-fs($fs-body, $brp-1);
-  //font-size: $fs-body;
   font-family: $f-body;
   background: $c-body-bg;
   color: $c-primary;
