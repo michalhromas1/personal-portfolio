@@ -12,7 +12,8 @@ img {
 }
 
 body {
-  font-size: $fs-body;
+  @include fluid-fs($fs-body, $brp-1);
+  //font-size: $fs-body;
   font-family: $f-body;
   background: $c-body-bg;
   color: $c-primary;
@@ -60,7 +61,7 @@ strong {
 }
 
 section {
-  padding: 6.3rem 0;
+  padding: get-em(6.3rem, $fs-body) 0;
 }
 
 .container {
