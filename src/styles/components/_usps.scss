@@ -30,6 +30,8 @@
   &__desc {
     @include fluid-fs($fs-usp__desc, $brp-1);
     line-height: get-em(3.2rem, $fs-about);
-    max-width: 30rem;
+    max-width: 29rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
