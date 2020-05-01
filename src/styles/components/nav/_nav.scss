@@ -1,0 +1,38 @@
+@import './nav-burger';
+
+.main-nav {
+  @include fluid-fs($fs-nav, $brp-1);
+  font-family: $f-nav;
+  font-weight: 900;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  width: 82%;
+  max-width: 41rem;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform $nav-burger__transition;
+  transition-property: transform, opacity;
+  opacity: 0;
+  transform: translateX(4.5rem);
+
+  &__item {
+    margin-right: get-em(3rem, $fs-nav);
+  }
+
+  &__link {
+    color: $c-nav;
+    display: block;
+    margin-bottom: get-em(-.5rem, $fs-nav);
+  }
+
+  &--active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
