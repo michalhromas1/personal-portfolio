@@ -1,0 +1,54 @@
+$nav-burger__line--width : get-em(3rem, $fs-nav);
+$nav-burger__line--color : $c-nav;
+$nav-burger__transition: $t-main-nav;
+
+.nav-burger {
+  --nav-burger__line--height: .2rem;
+  --nav-burger__line--spacing: .6rem;
+  width: $nav-burger__line--width;
+  position: relative;
+  font-size: inherit;
+
+  &__line {
+    height: var(--nav-burger__line--height);
+    background-color: $nav-burger__line--color;
+    transition: transform $nav-burger__transition;
+
+    &+& {
+      margin-top: var(--nav-burger__line--spacing);
+    }
+
+    &:nth-of-type(2) {
+      transition-property: transform, opacity;
+    }
+  }
+
+  &--active {
+
+    .nav-burger__line {
+      --y-offset: calc(var(--nav-burger__line--spacing) + var(--nav-burger__line--height));
+
+      &:nth-of-type(1) {
+        transform: translate3d(0, var(--y-offset), 0) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        transform: translate3d($nav-burger__line--width / -7, calc(-1 * var(--nav-burger__line--spacing)), 0) rotate(-45deg);
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        transform: translate3d(0, calc(-1 * var(--y-offset)), 0) rotate(-45deg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    --nav-burger__line--spacing: .5rem;
+  }
+
+  @media screen and (min-width: 450px) {
+    --nav-burger__line--spacing: .7rem;
+    --nav-burger__line--height: .3rem;
+  }
+}

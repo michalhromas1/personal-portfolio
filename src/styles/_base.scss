@@ -12,7 +12,7 @@ img {
 }
 
 body {
-  font-size: $fs-body;
+  @include fluid-fs($fs-body, $brp-1);
   font-family: $f-body;
   background: $c-body-bg;
   color: $c-primary;
@@ -53,6 +53,15 @@ a,
 button,
 input[type="submit"] {
   cursor: pointer;
+  padding: 0;
+  border: none;
+  background: inherit;
+  outline: none; // TODO: style outline
+}
+
+.btn,
+button {
+  display: block;
 }
 
 strong {
@@ -60,7 +69,7 @@ strong {
 }
 
 section {
-  padding: 6.3rem 0;
+  padding: get-em(6.3rem, $fs-body) 0;
 }
 
 .container {

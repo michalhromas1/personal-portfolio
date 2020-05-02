@@ -1,13 +1,13 @@
 {
   "nav": {
-    "contact": "Contact",
-    "portfolio": "Portfolio",
-    "skills": "Skills"
+    "1": "Skills",
+    "2": "Portfolio",
+    "3": "Contact"
   },
 
   "hero": {
-    "cta": "Let's meet",
-    "greeting": "Bonjour, I am",
+    "cta": "Get in touch",
+    "greeting": "Hello there, I am",
     "name--alt": "Michal Hromas",
     "person--alt": "A programmer",
 
