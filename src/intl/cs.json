@@ -1,8 +1,8 @@
 {
   "nav": {
-    "contact": "Kontakt",
-    "portfolio": "Portfolio",
-    "skills": "Dovednosti"
+    "1": "Dovednosti",
+    "2": "Portfolio",
+    "3": "Kontakt"
   },
 
   "hero": {

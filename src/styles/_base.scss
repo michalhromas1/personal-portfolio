@@ -53,6 +53,15 @@ a,
 button,
 input[type="submit"] {
   cursor: pointer;
+  padding: 0;
+  border: none;
+  background: inherit;
+  outline: none; // TODO: style outline
+}
+
+.btn,
+button {
+  display: block;
 }
 
 strong {
