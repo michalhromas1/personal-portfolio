@@ -5,8 +5,6 @@
   flex-direction: column;
   justify-content: center;
 
-  &__content {}
-
   &__person-wrapper {
     @include fluid-size(width, 25.6rem, $brp-1);
     @include fluid-size(margin-top, 2.6rem, $brp-1);
@@ -16,29 +14,71 @@
   }
 
   &__button {
-    @include fluid-fs($fs-hero__btn, $brp-1);
+    @include fluid-fs($fs-hero__btn--base, $brp-1);
+    @include fluid-fs($fs-hero__btn--brp-1, $brp-2, $brp-general--max, landscape);
     @include fluid-size(width, $minw-brp-fluid--base, $brp-1);
-    padding-top: get-em(1.3rem, $fs-hero__btn);
-    padding-bottom: get-em(.8rem, $fs-hero__btn); // -.5rem
-    border-width: get-em(.2rem, $fs-hero__btn);
+    @include fluid-size(width, $minw-brp-fluid--brp-1, $brp-2, $brp-general--max, landscape);
+    padding-top: get-em(1.3rem, $fs-hero__btn--base);
+    padding-bottom: get-em(.8rem, $fs-hero__btn--base); // -.5rem
+    border-width: get-em(.2rem, $fs-hero__btn--base);
+  }
+
+  @media (min-width: $brp-general--max) and (orientation: landscape) {
+
+    &__content {
+      display: flex;
+    }
+
+    &__button {
+      display: none;
+      padding-top: get-em(.8rem, $fs-hero__btn--brp-1);
+      padding-bottom: get-em(.5rem, $fs-hero__btn--brp-1);
+      border-width: get-em(.1rem, $fs-hero__btn--brp-1);
+    }
+
+    &__title {
+      width: 50%;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__person-wrapper {
+      order: -1;
+      width: 50%;
+      max-width: 50%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__title,
+    &__person-wrapper {
+      padding: 0 2rem;
+    }
   }
 }
 
 .main-title {
 
   &__greeting {
-    @include fluid-fs($fs-main-title__greeting--min, $brp-1);
-    margin-bottom: get-em(.8rem, $fs-main-title__greeting--min);
+    @include fluid-fs($fs-main-title__greeting--base, $brp-1);
+    @include fluid-fs($fs-main-title__greeting--brp-1, $brp-2, $brp-general--max, landscape);
+    margin-bottom: get-em(.8rem, $fs-main-title__greeting--base);
     color: $c-hero-greeting;
   }
 
   &__name {
     @include fluid-size(width, $minw-brp-fluid--base, $brp-1);
+    @include fluid-size(width, $minw-brp-fluid--brp-1, $brp-2, $brp-general--max, landscape);
   }
 
   &__jobs {
-    @include fluid-fs($fs-main-title__jobs--min, $brp-1);
-    margin-top: get-em(1.6rem, $fs-main-title__jobs--min);
+    @include fluid-fs($fs-main-title__jobs--base, $brp-1);
+    @include fluid-fs($fs-main-title__jobs--brp-1, $brp-2, $brp-general--max, landscape);
+    margin-top: get-em(1.6rem, $fs-main-title__jobs--base);
     color: $c-primary;
     display: flex;
     justify-content: center;
@@ -46,12 +86,29 @@
   }
 
   &__jobs-divider {
-    $size: get-em(.5rem, $fs-main-title__jobs--min);
+    $size: get-em(.5rem, $fs-main-title__jobs--base);
     width: $size;
     height: $size;
-    margin: -.4rem get-em(.9rem, $fs-main-title__jobs--min) 0;
+    margin: get-em(-.4rem, $fs-main-title__jobs--base) get-em(.9rem, $fs-main-title__jobs--base) 0;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+  }
+
+  @media (min-width: $brp-general--max) and (orientation: landscape) {
+    &__greeting {
+      margin-bottom: get-em(.5rem, $fs-main-title__greeting--brp-1);
+    }
+
+    &__jobs {
+      margin-top: get-em(.9rem, $fs-main-title__jobs--brp-1);
+    }
+
+    &__jobs-divider {
+      $size: get-em(.3rem, $fs-main-title__jobs--brp-1);
+      width: $size;
+      height: $size;
+      margin: get-em(-.3rem, $fs-main-title__jobs--brp-1) get-em(.5rem, $fs-main-title__jobs--brp-1) 0;
+    }
   }
 }

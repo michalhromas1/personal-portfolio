@@ -1,12 +1,3 @@
-// --- Breakpoints ---
-$brp-fluid--base: 375px;
-$brp-1: 500px;
-
-
-// --- Breakpoint Element Min Widths ---
-$minw-brp-fluid--base: 31rem;
-
-
 // --- Functions ---
 @function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
   $result: (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
@@ -23,7 +14,7 @@ $minw-brp-fluid--base: 31rem;
   @return floor-to-precision($result);
 }
 
-@function floor-to-precision($number, $precision: 3) {
+@function floor-to-precision($number, $precision: $default-precision) {
   @if $precision < 1 {
     @return floor($number);
   }
@@ -50,7 +41,7 @@ $minw-brp-fluid--base: 31rem;
 
 
 // --- Mixins ---
-@mixin fluid-size($property, $init-size-in-rem, $to-in-px, $from-in-px: $brp-fluid--base) {
+@mixin fluid-size($property, $init-size-in-rem, $to-in-px, $from-in-px: $brp-fluid--base, $orientation: $default-orientation) {
   $size--fluid: get-fluid-size($init-size-in-rem, $from-in-px);
 
   @if $brp-fluid--base>=$from-in-px {
@@ -58,18 +49,18 @@ $minw-brp-fluid--base: 31rem;
   }
 
   @else {
-    @media screen and (min-width: $from-in-px) {
+    @media (min-width: $from-in-px) and (orientation: $orientation) {
       #{$property}: $size--fluid;
     }
   }
 
-  @media screen and (min-width: $to-in-px) {
+  @media (min-width: $to-in-px) and (orientation: $orientation) {
     #{$property}: floor-to-precision((($to-in-px / 1px) * ($size--fluid / 1vw) / 1000) * 1rem);
   }
 }
 
-@mixin fluid-fs($init-fs-in-rem, $to-in-px, $from-in-px: $brp-fluid--base) {
-  @include fluid-size(font-size, $init-fs-in-rem, $to-in-px, $from-in-px);
+@mixin fluid-fs($init-fs-in-rem, $to-in-px, $from-in-px: $brp-fluid--base, $orientation: $default-orientation) {
+  @include fluid-size(font-size, $init-fs-in-rem, $to-in-px, $from-in-px, $orientation);
 }
 
 @mixin curved-edge {
