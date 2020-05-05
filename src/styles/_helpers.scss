@@ -1,28 +1,4 @@
 // --- Functions ---
-@function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
-  $result: (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
-  @return floor-to-precision($result);
-}
-
-@function get-fluid-size-max-breakpoint($max-size-in-rems, $fluid-size-in-vw) {
-  $result: (($max-size-in-rems / 1rem) / ($fluid-size-in-vw / 1vw) * 1000) * 1px;
-  @return floor-to-precision($result);
-}
-
-@function get-em($desired-value-in-rem, $related-fs-in-rem) {
-  $result: ($desired-value-in-rem / $related-fs-in-rem) * 1em;
-  @return floor-to-precision($result);
-}
-
-@function floor-to-precision($number, $precision: $default-precision) {
-  @if $precision < 1 {
-    @return floor($number);
-  }
-
-  $multiplier: pow(10, $precision);
-  @return floor($number * $multiplier) / $multiplier;
-}
-
 @function pow($base, $exponent) {
   $value: 1;
 
@@ -39,28 +15,53 @@
   @return $value;
 }
 
+@function floor-to-precision($number, $precision: $helper-default__precision) {
+  @if $precision < 1 {
+    @return floor($number);
+  }
+
+  $multiplier: pow(10, $precision);
+  $result: floor($number * $multiplier) / $multiplier;
+  @return $result;
+}
+
+@function get-em($desired-value-in-rem, $related-fs-in-rem) {
+  $result: ($desired-value-in-rem / $related-fs-in-rem) * 1em;
+  @return floor-to-precision($result);
+}
+
+@function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
+  $result: (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
+  @return floor-to-precision($result);
+}
+
+@function get-fluid-stop($size-fluid, $fluid-to-in-px) {
+  $fluid-stop: floor-to-precision((($fluid-to-in-px / 1px) * ($size-fluid / 1vw) / 1000) * 1rem);
+  @return $fluid-stop;
+}
+
 
 // --- Mixins ---
-@mixin fluid-size($property, $init-size-in-rem, $to-in-px, $from-in-px: $brp-fluid--base, $orientation: $default-orientation) {
-  $size--fluid: get-fluid-size($init-size-in-rem, $from-in-px);
+@mixin general-responsivity($property, $init-size-in-rem) {
+  $fluid-size: get-fluid-size($init-size-in-rem, $brp__general--fluid-base);
 
-  @if $brp-fluid--base>=$from-in-px {
-    #{$property}: $size--fluid;
-  }
+  #{$property}: $fluid-size;
 
-  @else {
-    @media (min-width: $from-in-px) and (orientation: $orientation) {
-      #{$property}: $size--fluid;
-    }
-  }
-
-  @media (min-width: $to-in-px) and (orientation: $orientation) {
-    #{$property}: floor-to-precision((($to-in-px / 1px) * ($size--fluid / 1vw) / 1000) * 1rem);
+  @media (min-width: ($brp__general--fluid-to + 1)) {
+    #{$property}: get-fluid-stop($fluid-size, $brp__general--fluid-to);
   }
 }
 
-@mixin fluid-fs($init-fs-in-rem, $to-in-px, $from-in-px: $brp-fluid--base, $orientation: $default-orientation) {
-  @include fluid-size(font-size, $init-fs-in-rem, $to-in-px, $from-in-px, $orientation);
+@mixin portrait-responsivity($property, $init-size-in-rem) {
+  $fluid-size: get-fluid-size($init-size-in-rem, $brp__portrait--fluid-base);
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    #{$property}: get-fluid-stop($fluid-size, $brp__portrait--fluid-to);
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--fluid-to) {
+    #{$property}: $fluid-size;
+  }
 }
 
 @mixin curved-edge {

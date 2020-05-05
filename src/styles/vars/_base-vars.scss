@@ -1,16 +1,16 @@
 // --- Helpers ---
-$default-precision: 3;
-$default-orientation: portrait;
+$helper-default__precision: 3;
 
 
 // --- Breakpoints ---
-$brp-fluid--base: 375px;
-$brp-1: 1024px;
-$brp-2: 960px;
-$brp-general--max: 500px;
-$brp-portrait--max: 1024px;
+$brp__portrait--fluid-base: 375px;
+$brp__portrait--fluid-to: 600px;
+$brp__portrait--max: 1024px;
+
+$brp__general--fluid-base: 500px; // TODO: change to 1920px
+$brp__general--fluid-to: 1920px;
 
 
 // --- Breakpoint Element Min Widths ---
-$minw-brp-fluid--base: 31rem;
-$minw-brp-fluid--brp-1: 18.5rem;
+$max-el-width__hero: 18.5rem;
+$max-el-width__hero--portrait: 31rem;
