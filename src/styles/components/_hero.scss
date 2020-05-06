@@ -6,36 +6,63 @@
   justify-content: center;
 
   &__content {
-    display: flex;
+    position: relative;
+    @include general-responsivity(top, $about__margin-top / 2);
+    @include general-responsivity(row-gap, 3.3rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "graphic title"
+      "graphic button";
+    @include portrait-responsivity(top, $about__margin-top--portrait / 2);
   }
 
   &__title,
-  &__person-wrapper {
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    max-width: 50%;
+  &__button-wrapper {
+    justify-self: start;
+    @include general-responsivity(margin-left, 10.3rem);
+  }
+
+  &__title {
+    grid-area: title;
+    align-self: end;
   }
 
   &__person-wrapper {
-    order: -1;
-    @include portrait-responsivity(width, 25.6rem);
+    grid-area: graphic;
+    justify-self: end;
     @include portrait-responsivity(margin-top, 2.6rem);
     @include portrait-responsivity(margin-bottom, 2.9rem);
   }
 
+  &__person {
+    @include general-responsivity(width, 84.8rem);
+    @include portrait-responsivity(width, 25.6rem);
+    max-height: none;
+  }
+
+  &__button-wrapper {
+    grid-area: button;
+  }
+
   &__button {
-    display: none; // TODO: remove
     @include general-responsivity(font-size, $fs-hero__btn);
     @include general-responsivity(width, $max-el-width__hero);
-    padding-top: get-em(.8rem, $fs-hero__btn);
-    padding-bottom: get-em(.5rem, $fs-hero__btn);
-    border-width: get-em(.1rem, $fs-hero__btn);
+    padding-top: get-em(2.6rem, $fs-hero__btn);
+    padding-bottom: get-em(2rem, $fs-hero__btn);
+    border-width: get-em(.3rem, $fs-hero__btn);
     @include portrait-responsivity(font-size, $fs-hero__btn--portrait);
     @include portrait-responsivity(width, $max-el-width__hero--portrait);
   }
+
+  &__learn-more {
+    @include general-responsivity(bottom, -$about__margin-top + 4.8rem);
+    @include portrait-responsivity(bottom, -$about__margin-top--portrait + 2.5rem);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 
   @media (orientation: portrait) and (max-width: $brp__portrait--max) {
 
@@ -43,27 +70,16 @@
       display: block;
     }
 
+    &__button {
+      padding-top: get-em(1.3rem, $fs-hero__btn--portrait);
+      padding-bottom: get-em(.8rem, $fs-hero__btn--portrait);
+      border-width: get-em(.2rem, $fs-hero__btn--portrait);
+    }
+
     &__title,
-    &__person-wrapper {
-      display: block;
-      max-width: none;
-      padding: 0;
-    }
-
-    &__title {
-      width: auto;
-    }
-
-    &__person-wrapper {
+    &__button-wrapper {
       margin-left: auto;
       margin-right: auto;
-    }
-
-    &__button {
-      display: block; // TODO: remove
-      padding-top: get-em(1.3rem, $fs-hero__btn--portrait);
-      padding-bottom: get-em(.8rem, $fs-hero__btn--portrait); // -.5rem
-      border-width: get-em(.2rem, $fs-hero__btn--portrait);
     }
   }
 }
@@ -72,7 +88,7 @@
 
   &__greeting {
     @include general-responsivity(font-size, $fs-main-title__greeting);
-    margin-bottom: get-em(.5rem, $fs-main-title__greeting);
+    margin-bottom: get-em(2.1rem, $fs-main-title__greeting);
     color: $c-hero-greeting;
     @include portrait-responsivity(font-size, $fs-main-title__greeting--portrait);
   }
@@ -84,7 +100,7 @@
 
   &__jobs {
     @include general-responsivity(font-size, $fs-main-title__jobs);
-    margin-top: get-em(.9rem, $fs-main-title__jobs);
+    margin-top: get-em(3.4rem, $fs-main-title__jobs);
     color: $c-primary;
     display: flex;
     justify-content: center;
@@ -93,8 +109,8 @@
   }
 
   &__jobs-divider {
-    margin: get-em(-.3rem, $fs-main-title__jobs) get-em(.5rem, $fs-main-title__jobs) 0;
-    $size: get-em(.3rem, $fs-main-title__jobs);
+    margin: get-em(-1rem, $fs-main-title__jobs) get-em(2rem, $fs-main-title__jobs) 0;
+    $size: get-em(1.3rem, $fs-main-title__jobs);
     width: $size;
     height: $size;
     background-repeat: no-repeat;
@@ -118,5 +134,54 @@
       width: $size;
       height: $size;
     }
+  }
+}
+
+.main-nav,
+.learn-more {
+  @include general-responsivity(font-size, $fs-nav);
+  @include portrait-responsivity(font-size, $fs-nav--portrait);
+}
+
+.learn-more {
+  --learn-more__line--width: #{get-em(3rem, $fs-nav)};
+  --learn-more__line--spacing: #{get-em(1.2rem, $fs-nav)};
+  --learn-more__line--weight: #{get-em(.3rem, $fs-nav)};
+  --learn-more__line-wrapper--width: calc(var(--learn-more__line--width) * 1.414); // sqrt(2)
+  --learn-more__line-wrapper--height: calc(var(--learn-more__line-wrapper--width) / 2);
+  --learn-more__line-wrapper--margin-bottom: calc(-1 * (var(--learn-more__line-wrapper--height) - (var(--learn-more__line--spacing) + var(--learn-more__line--weight))));
+  --learn-more__line--left: var(--learn-more__line-wrapper--height);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--learn-more__line-wrapper--width);
+
+  &__line-wrapper {
+    position: relative;
+    height: var(--learn-more__line-wrapper--height);
+    width: var(--learn-more__line-wrapper--width);
+    margin-bottom: var(--learn-more__line-wrapper--margin-bottom);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: 0;
+    left: var(--learn-more__line--left);
+    width: var(--learn-more__line--width);
+    height: var(--learn-more__line--width);
+    border-left: var(--learn-more__line--weight) solid $c-hero-learn-more;
+    border-bottom: var(--learn-more__line--weight) solid $c-hero-learn-more;
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    --learn-more__line--width: #{get-em(2.3rem, $fs-nav--portrait)};
+    --learn-more__line--spacing: #{get-em(.6rem, $fs-nav--portrait)};
+    --learn-more__line--weight: #{get-em(.2rem, $fs-nav--portrait)};
   }
 }
