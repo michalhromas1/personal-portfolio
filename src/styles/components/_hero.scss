@@ -5,53 +5,118 @@
   flex-direction: column;
   justify-content: center;
 
-  &__content {}
+  &__content {
+    display: flex;
+  }
+
+  &__title,
+  &__person-wrapper {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    max-width: 50%;
+  }
 
   &__person-wrapper {
-    @include fluid-size(width, 25.6rem, $brp-1);
-    @include fluid-size(margin-top, 2.6rem, $brp-1);
-    @include fluid-size(margin-bottom, 2.9rem, $brp-1);
-    margin-left: auto;
-    margin-right: auto;
+    order: -1;
+    @include portrait-responsivity(width, 25.6rem);
+    @include portrait-responsivity(margin-top, 2.6rem);
+    @include portrait-responsivity(margin-bottom, 2.9rem);
   }
 
   &__button {
-    @include fluid-fs($fs-hero__btn, $brp-1);
-    @include fluid-size(width, $minw-brp-fluid--base, $brp-1);
-    padding-top: get-em(1.3rem, $fs-hero__btn);
-    padding-bottom: get-em(.8rem, $fs-hero__btn); // -.5rem
-    border-width: get-em(.2rem, $fs-hero__btn);
+    display: none; // TODO: remove
+    @include general-responsivity(font-size, $fs-hero__btn);
+    @include general-responsivity(width, $max-el-width__hero);
+    padding-top: get-em(.8rem, $fs-hero__btn);
+    padding-bottom: get-em(.5rem, $fs-hero__btn);
+    border-width: get-em(.1rem, $fs-hero__btn);
+    @include portrait-responsivity(font-size, $fs-hero__btn--portrait);
+    @include portrait-responsivity(width, $max-el-width__hero--portrait);
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+
+    &__content {
+      display: block;
+    }
+
+    &__title,
+    &__person-wrapper {
+      display: block;
+      max-width: none;
+      padding: 0;
+    }
+
+    &__title {
+      width: auto;
+    }
+
+    &__person-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__button {
+      display: block; // TODO: remove
+      padding-top: get-em(1.3rem, $fs-hero__btn--portrait);
+      padding-bottom: get-em(.8rem, $fs-hero__btn--portrait); // -.5rem
+      border-width: get-em(.2rem, $fs-hero__btn--portrait);
+    }
   }
 }
 
 .main-title {
 
   &__greeting {
-    @include fluid-fs($fs-main-title__greeting--min, $brp-1);
-    margin-bottom: get-em(.8rem, $fs-main-title__greeting--min);
+    @include general-responsivity(font-size, $fs-main-title__greeting);
+    margin-bottom: get-em(.5rem, $fs-main-title__greeting);
     color: $c-hero-greeting;
+    @include portrait-responsivity(font-size, $fs-main-title__greeting--portrait);
   }
 
   &__name {
-    @include fluid-size(width, $minw-brp-fluid--base, $brp-1);
+    @include general-responsivity(width, $max-el-width__hero);
+    @include portrait-responsivity(width, $max-el-width__hero--portrait);
   }
 
   &__jobs {
-    @include fluid-fs($fs-main-title__jobs--min, $brp-1);
-    margin-top: get-em(1.6rem, $fs-main-title__jobs--min);
+    @include general-responsivity(font-size, $fs-main-title__jobs);
+    margin-top: get-em(.9rem, $fs-main-title__jobs);
     color: $c-primary;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include portrait-responsivity(font-size, $fs-main-title__jobs--portrait);
   }
 
   &__jobs-divider {
-    $size: get-em(.5rem, $fs-main-title__jobs--min);
+    margin: get-em(-.3rem, $fs-main-title__jobs) get-em(.5rem, $fs-main-title__jobs) 0;
+    $size: get-em(.3rem, $fs-main-title__jobs);
     width: $size;
     height: $size;
-    margin: -.4rem get-em(.9rem, $fs-main-title__jobs--min) 0;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+
+    &__greeting {
+      margin-bottom: get-em(.8rem, $fs-main-title__greeting--portrait);
+    }
+
+    &__jobs {
+      margin-top: get-em(1.6rem, $fs-main-title__jobs--portrait);
+    }
+
+    &__jobs-divider {
+      margin: get-em(-.4rem, $fs-main-title__jobs--portrait) get-em(.9rem, $fs-main-title__jobs--portrait) 0;
+      $size: get-em(.5rem, $fs-main-title__jobs--portrait);
+      width: $size;
+      height: $size;
+    }
   }
 }

@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="hero container" id="hero">
       <div className="hero__content">
-        <h1 className="main-title">
+        <h1 className="main-title hero__title">
           <div className="main-title__greeting">
             {intl.formatMessage({ id: "hero.greeting" })}
           </div>

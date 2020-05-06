@@ -1,0 +1,16 @@
+// --- Helpers ---
+$helper-default__precision: 3;
+
+
+// --- Breakpoints ---
+$brp__portrait--fluid-base: 375px;
+$brp__portrait--fluid-to: 600px;
+$brp__portrait--max: 1024px;
+
+$brp__general--fluid-base: 500px; // TODO: change to 1920px
+$brp__general--fluid-to: 1920px;
+
+
+// --- Breakpoint Element Min Widths ---
+$max-el-width__hero: 18.5rem;
+$max-el-width__hero--portrait: 31rem;

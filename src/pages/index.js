@@ -15,8 +15,10 @@ const IndexPage = () => {
   return (
     <div>
       {/* <SEO title="Home" /> */}
-      <Header />
-      <Hero />
+      <div className="landing-wrapper">
+        <Header />
+        <Hero />
+      </div>
       <About />
       <Usps />
       <Skills />
