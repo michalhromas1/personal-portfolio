@@ -1,16 +1,19 @@
 .about {
-  @include fluid-fs($fs-about, $brp-1);
   @include curved-edge;
-  line-height: get-em(3.2rem, $fs-about);
-  padding-top: get-em(2.3rem, $fs-about); // -.7rem
-  padding-bottom: get-em(2.1rem, $fs-about); // -.9rem
   margin-top: -2rem;
   background: $c-theme;
   text-align: center;
   color: $c-secondary;
+  @include portrait-responsivity(font-size, $fs-about--portrait);
 
   &__text {
     max-width: 120rem;
     margin: auto;
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    line-height: get-em(3.2rem, $fs-about--portrait);
+    padding-top: get-em(2.3rem, $fs-about--portrait); // -.7rem
+    padding-bottom: get-em(2.1rem, $fs-about--portrait); // -.9rem
   }
 }

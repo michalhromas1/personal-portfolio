@@ -1,8 +1,7 @@
 @import './nav-burger';
 
 .main-nav {
-  @include fluid-fs($fs-nav--base, $brp-1);
-  @include fluid-fs($fs-nav--brp-1, $brp-2, $brp-general--max, landscape);
+  @include general-responsivity(font-size, $fs-nav);
   font-family: $f-nav;
   font-weight: 900;
   display: flex;
@@ -10,26 +9,27 @@
   align-items: center;
   margin: auto;
   width: 82%;
+  @include portrait-responsivity(font-size, $fs-nav--portrait);
 }
 
 .nav-content {
-  $translateX: get-em(4.5rem, $fs-nav--base);
+  $translateX: get-em(3.3rem, $fs-nav);
+  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   transition: transform $nav-burger__transition;
   transition-property: transform, opacity;
-  opacity: 0;
   transform: translateX($translateX);
 
   &__item {
-    margin-right: get-em(3rem, $fs-nav--base);
+    margin-right: get-em(2.2rem, $fs-nav);
   }
 
   &__link {
+    margin-right: get-em(-.4rem, $fs-nav);
     color: $c-nav;
     display: block;
-    margin-bottom: get-em(-.5rem, $fs-nav--base);
   }
 
   &--active {
@@ -37,20 +37,20 @@
     transform: translateX(0);
   }
 
-  @media (min-width: $brp-general--max) and (orientation: landscape) {
-    $translateX: get-em(3.3rem, $fs-nav--brp-1);
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    $translateX: get-em(4.5rem, $fs-nav--portrait);
     transform: translateX($translateX);
 
-    &--active {
-      transform: translateX(0);
-    }
-
     &__item {
-      margin-right: get-em(2.2rem, $fs-nav--brp-1);
+      margin-right: get-em(3rem, $fs-nav--portrait);
     }
 
     &__link {
-      margin-right: get-em(-.4rem, $fs-nav--brp-1);
+      margin-bottom: get-em(-.5rem, $fs-nav--portrait);
+    }
+
+    &--active {
+      transform: translateX(0);
     }
   }
 }

@@ -21,22 +21,20 @@ $f-nav: $bebas;
 
 // --- Font Sizes ---
 // 1rem = 10px
-$fs-body: 1.6rem;
+$fs-main-title__greeting: 3rem;
+$fs-main-title__greeting--portrait: 5.2rem;
 
-$fs-main-title__greeting--base: 5.2rem;
-$fs-main-title__greeting--brp-1: 3rem;
+$fs-main-title__jobs: 1.7rem;
+$fs-main-title__jobs--portrait: 3rem;
 
-$fs-main-title__jobs--base: 3rem;
-$fs-main-title__jobs--brp-1: 1.7rem;
+$fs-hero__btn: 1.3rem;
+$fs-hero__btn--portrait: 2.2rem;
 
-$fs-hero__btn--base: 2.2rem;
-$fs-hero__btn--brp-1: 1.3rem;
+$fs-nav: 1.3rem;
+$fs-nav--portrait: 1.8rem;
 
-$fs-nav--base: 1.8rem;
-$fs-nav--brp-1: 1.3rem;
-
-
-$fs-about: 1.8rem;
-$fs-usp__desc: 1.8rem;
-$fs-h2: 7rem;
-$fs-h3: 4rem;
+$fs-body--portrait: 1.6rem;
+$fs-h2--portrait: 7rem;
+$fs-h3--portrait: 4rem;
+$fs-about--portrait: 1.8rem;
+$fs-usp__desc--portrait: 1.8rem;

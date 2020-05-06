@@ -12,10 +12,10 @@ img {
 }
 
 body {
-  @include fluid-fs($fs-body, $brp-1);
   font-family: $f-body;
   background: $c-body-bg;
   color: $c-primary;
+  @include portrait-responsivity(font-size, $fs-body--portrait);
 }
 
 h1,
@@ -34,14 +34,17 @@ input[type="submit"] {
 }
 
 h2 {
-  @include fluid-fs($fs-h2, $brp-1);
-  line-height: get-em(7rem, $fs-h2);
   color: $c-section-headings;
+  @include portrait-responsivity(font-size, $fs-h2--portrait);
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    line-height: get-em(7rem, $fs-h2--portrait);
+  }
 }
 
 h3 {
-  @include fluid-fs($fs-h3, $brp-1);
   color: $c-primary;
+  @include portrait-responsivity(font-size, $fs-h3--portrait);
 }
 
 a {
@@ -69,7 +72,9 @@ strong {
 }
 
 section {
-  padding: get-em(6.3rem, $fs-body) 0;
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    padding: get-em(6.3rem, $fs-body--portrait) 0;
+  }
 }
 
 .container {
