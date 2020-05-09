@@ -13,6 +13,15 @@ $f-nav: $bebas;
 
 // --- Font Sizes ---
 // 1rem = 10px
+$fs-body: 2.9rem;
+$fs-body--portrait: 1.8rem;
+
+$fs-h2: 17.7rem;
+$fs-h2--portrait: 7rem;
+
+$fs-h3: 5.6rem;
+$fs-h3--portrait: 4rem;
+
 $fs-main-title__greeting: 10.9rem;
 $fs-main-title__greeting--portrait: 5.2rem;
 
@@ -28,9 +37,7 @@ $fs-nav--portrait: 1.8rem;
 $fs-about: 2.9rem;
 $fs-about--portrait: 1.8rem;
 
-$fs-body--portrait: 1.6rem;
-$fs-h2--portrait: 7rem;
-$fs-h3--portrait: 4rem;
+$fs-usp__desc: 2.9rem;
 $fs-usp__desc--portrait: 1.8rem;
 
 // --- Breakpoint Element Min Widths ---
