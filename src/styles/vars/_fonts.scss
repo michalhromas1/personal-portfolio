@@ -1,23 +1,15 @@
 // --- Fonts ---
 // Source Sans Pro (400, 700)
 // Bebas Neue (400)
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@400;700&display=swap");
 
-$ssans: 'Source Sans Pro',
-Arial,
-Helvetica,
-sans-serif;
-$bebas: 'Bebas Neue',
-Arial,
-Helvetica,
-sans-serif;
-
+$ssans: "Source Sans Pro", Arial, Helvetica, sans-serif;
+$bebas: "Bebas Neue", Arial, Helvetica, sans-serif;
 
 // --- Semantic Fonts ---
 $f-body: $ssans;
 $f-headings: $bebas;
 $f-nav: $bebas;
-
 
 // --- Font Sizes ---
 // 1rem = 10px
@@ -33,12 +25,13 @@ $fs-hero__btn--portrait: 2.2rem;
 $fs-nav: 2.7rem;
 $fs-nav--portrait: 1.8rem;
 
+$fs-about: 2.9rem;
+$fs-about--portrait: 1.8rem;
+
 $fs-body--portrait: 1.6rem;
 $fs-h2--portrait: 7rem;
 $fs-h3--portrait: 4rem;
-$fs-about--portrait: 1.8rem;
 $fs-usp__desc--portrait: 1.8rem;
-
 
 // --- Breakpoint Element Min Widths ---
 $max-el-width__hero: 66.4rem;
