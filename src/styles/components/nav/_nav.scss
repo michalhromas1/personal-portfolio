@@ -1,19 +1,25 @@
 @import './nav-burger';
 
 .main-nav {
-  @include general-responsivity(font-size, $fs-nav);
+  @include general-responsivity(margin-top, 7.7rem);
+  @include general-responsivity(margin-right, 7.7rem);
   font-family: $f-nav;
   font-weight: 900;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: auto;
-  width: 82%;
-  @include portrait-responsivity(font-size, $fs-nav--portrait);
+  overflow: hidden;
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    width: get-fluid-size(31rem, $brp__portrait--fluid-base);
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .nav-content {
-  $translateX: get-em(3.3rem, $fs-nav);
+  $translateX: get-em(5.7rem, $fs-nav);
   opacity: 0;
   display: flex;
   align-items: center;
@@ -23,11 +29,11 @@
   transform: translateX($translateX);
 
   &__item {
-    margin-right: get-em(2.2rem, $fs-nav);
+    margin-right: get-em(4.7rem, $fs-nav);
   }
 
   &__link {
-    margin-right: get-em(-.4rem, $fs-nav);
+    margin-bottom: get-em(-.4rem, $fs-nav);
     color: $c-nav;
     display: block;
   }

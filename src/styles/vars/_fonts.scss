@@ -21,16 +21,16 @@ $f-nav: $bebas;
 
 // --- Font Sizes ---
 // 1rem = 10px
-$fs-main-title__greeting: 3rem;
+$fs-main-title__greeting: 10.9rem;
 $fs-main-title__greeting--portrait: 5.2rem;
 
-$fs-main-title__jobs: 1.7rem;
+$fs-main-title__jobs: 6.5rem;
 $fs-main-title__jobs--portrait: 3rem;
 
-$fs-hero__btn: 1.3rem;
+$fs-hero__btn: 4rem;
 $fs-hero__btn--portrait: 2.2rem;
 
-$fs-nav: 1.3rem;
+$fs-nav: 2.7rem;
 $fs-nav--portrait: 1.8rem;
 
 $fs-body--portrait: 1.6rem;
@@ -38,3 +38,11 @@ $fs-h2--portrait: 7rem;
 $fs-h3--portrait: 4rem;
 $fs-about--portrait: 1.8rem;
 $fs-usp__desc--portrait: 1.8rem;
+
+
+// --- Breakpoint Element Min Widths ---
+$max-el-width__hero: 66.4rem;
+$max-el-width__hero--portrait: 31rem;
+
+$about__margin-top: -5rem;
+$about__margin-top--portrait: -2rem;
