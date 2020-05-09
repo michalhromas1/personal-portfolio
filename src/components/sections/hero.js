@@ -1,5 +1,5 @@
 import React from "react"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, Link } from "gatsby-plugin-intl"
 import Name from "./../../images/svg/name.svg"
 import Person from "./../../images/svg/person.svg"
 import Dot from "./../../images/svg/dot.svg"
@@ -43,10 +43,25 @@ const Hero = () => {
           />
         </div>
 
-        <a href="#" className="hero__button btn btn--hero">
-          {intl.formatMessage({ id: "hero.cta" })}
-        </a>
+        <div className="hero__button-wrapper">
+          <a href="#" className="hero__button btn btn--hero smooth-scroll">
+            {intl.formatMessage({ id: "hero.cta" })}
+          </a>
+        </div>
       </div>
+
+      <Link
+        title={intl.formatMessage({ id: "hero.learn-more--title" })}
+        className="hero__learn-more learn-more smooth-scroll"
+        to="/#about"
+      >
+        <div className="learn-more__line-wrapper">
+          <div className="learn-more__line"></div>
+        </div>
+        <div className="learn-more__line-wrapper">
+          <div className="learn-more__line"></div>
+        </div>
+      </Link>
     </section>
   )
 }

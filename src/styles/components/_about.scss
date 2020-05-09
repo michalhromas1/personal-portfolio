@@ -1,10 +1,11 @@
 .about {
   @include curved-edge;
-  margin-top: -2rem;
+  @include general-responsivity(margin-top, $about__margin-top);
   background: $c-theme;
   text-align: center;
   color: $c-secondary;
   @include portrait-responsivity(font-size, $fs-about--portrait);
+  @include portrait-responsivity(margin-top, $about__margin-top--portrait);
 
   &__text {
     max-width: 120rem;

@@ -4,5 +4,6 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 2.5rem;
+  // top: 2.5rem;
+  @include portrait-responsivity(top, 2.5rem);
 }
