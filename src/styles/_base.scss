@@ -12,6 +12,7 @@ img {
 }
 
 body {
+  @include general-responsivity(font-size, $fs-body);
   font-family: $f-body;
   background: $c-body-bg;
   color: $c-primary;
@@ -34,17 +35,22 @@ input[type="submit"] {
 }
 
 h2 {
+  @include general-responsivity(font-size, $fs-h2);
   color: $c-section-headings;
   @include portrait-responsivity(font-size, $fs-h2--portrait);
+  @include portrait-responsivity(line-height, 7rem);
 
-  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
-    line-height: get-em(7rem, $fs-h2--portrait);
+  & + * {
+    @include general-responsivity(margin-top, 2.3rem);
+    @include portrait-responsivity(margin-top, 4.8rem);
   }
 }
 
 h3 {
+  @include general-responsivity(font-size, $fs-h3);
   color: $c-primary;
   @include portrait-responsivity(font-size, $fs-h3--portrait);
+  @include portrait-responsivity(margin-bottom, -1rem);
 }
 
 a {
@@ -72,19 +78,26 @@ strong {
 }
 
 section {
-  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
-    padding: get-em(6.3rem, $fs-body--portrait) 0;
-  }
+  @include general-responsivity(padding-top, 12.3rem);
+  @include general-responsivity(padding-bottom, 12.3rem);
+  padding-left: 0;
+  padding-right: 0;
+  @include portrait-responsivity(padding-top, 6.3rem);
+  @include portrait-responsivity(padding-bottom, 6.3rem);
 }
 
 .container {
   width: 100%;
-  padding: 0 2.5rem;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  @include portrait-responsivity(padding-right, 2.5rem);
+  @include portrait-responsivity(padding-left, 2.5rem);
 
   &--narrow {
-    padding: 0 4.5rem;
+    @include portrait-responsivity(padding-left, 4.5rem);
+    @include portrait-responsivity(padding-right, 4.5rem);
   }
 }
 
@@ -104,8 +117,4 @@ section {
     border-color: $c-theme;
     background-color: $c-theme;
   }
-}
-
-.landing-wrapper {
-  position: relative;
 }
