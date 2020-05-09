@@ -1,7 +1,7 @@
-.nav-burger {
-  $nav-burger__line--color: $c-nav;
-  $nav-burger__transition: $t-main-nav;
+$nav-burger__line--color: $c-nav;
+$nav-burger__transition: $t-main-nav;
 
+.nav-burger {
   --nav-burger__line--width: #{get-em(4rem, $fs-nav)};
   --nav-burger__line--height: 0.3rem;
   --nav-burger__line--spacing: 0.7rem;
