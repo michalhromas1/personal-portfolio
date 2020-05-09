@@ -1,50 +1,47 @@
 .usps {
-
-  &__title {
-    margin-top: .8rem; // +.8rem
+  &__grid {
+    @include general-responsivity(column-gap, 18rem);
+    @include general-responsivity(margin-bottom, -0.7rem);
+    grid-template-columns: repeat(3, get-em(31.4rem, $fs-body));
+    display: grid;
+    justify-content: center;
+    @include portrait-responsivity(margin-bottom, -0.9rem);
   }
 
   @media (orientation: portrait) and (max-width: $brp__portrait--max) {
-
-    &__title {
-      margin-bottom: get-em(4.8rem, $fs-h2--portrait); // -1.5rem
+    &__grid {
+      display: block;
     }
   }
 }
 
 .usp {
   text-align: center;
-  @include portrait-responsivity(font-size, $fs-h3--portrait);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  @include portrait-responsivity(width, 29rem);
 
-  &:first-child {
-    margin-top: 0;
+  & + & {
+    @include portrait-responsivity(margin-top, 5.8rem);
   }
 
-  &:last-child {
-    margin-bottom: -.9rem; // -.9rem
+  &__icon-wrapper {
+    @include general-responsivity(height, 12.4rem);
+    @include portrait-responsivity(height, 8.5rem);
+  }
+
+  &__heading {
+    @include general-responsivity(margin-top, 4.8rem);
+    @include general-responsivity(margin-bottom, 2.5rem);
+    @include portrait-responsivity(margin-top, 3.5rem);
+    @include portrait-responsivity(margin-bottom, 1.5rem);
   }
 
   &__desc {
-    max-width: 29rem;
-    margin-left: auto;
-    margin-right: auto;
+    @include general-responsivity(font-size, $fs-usp__desc);
+    @include general-responsivity(line-height, 5rem);
     @include portrait-responsivity(font-size, $fs-usp__desc--portrait);
-  }
-
-  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
-    margin-top: get-em(5.8rem, $fs-h3--portrait); // -.5rem
-
-    &__icon-wrapper {
-      height: get-em(8.5rem, $fs-h3--portrait);
-    }
-
-    &__heading {
-      margin-top: get-em(3.5rem, $fs-h3--portrait); // +.5rem
-      margin-bottom: get-em(3.5rem, $fs-h3--portrait); // -1.7rem
-    }
-
-    &__desc {
-      line-height: get-em(3.2rem, $fs-usp__desc--portrait);
-    }
+    @include portrait-responsivity(line-height, 3.2rem);
   }
 }

@@ -23,7 +23,7 @@ const Usps = () => {
 
   return (
     <section className="usps" id="usps">
-      <div className="container container--narrow">
+      <div className="container">
         <h2 className="usps__title">
           {intl.formatMessage({ id: "usps.heading" })}
         </h2>
