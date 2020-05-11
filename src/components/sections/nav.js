@@ -5,7 +5,7 @@ const Nav = () => {
   const [active, toggleMenu] = useState(false)
   const intl = useIntl()
 
-  const urls = ["/#skills", "/#", "/#"]
+  const urls = ["/#skills", "/#portfolio", "/#"]
   const links = []
 
   urls.forEach((url, idx) => {
