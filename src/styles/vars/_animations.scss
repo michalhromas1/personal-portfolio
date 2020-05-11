@@ -1,8 +1,11 @@
 // --- Transitions ---
-$t-btn-duration: 150ms;
+$t-btn-duration: 100ms;
 $t-btn-func: ease-in-out;
-$t-main-nav: 150ms ease;
+$t-main-nav: 100ms ease-in-out;
 
 $t-btn: background-color $t-btn-duration $t-btn-func,
 color $t-btn-duration $t-btn-func,
 border-color $t-btn-duration $t-btn-func;
+
+$t-link-settings: 100ms ease-in-out;
+$t-link: color $t-link-settings;

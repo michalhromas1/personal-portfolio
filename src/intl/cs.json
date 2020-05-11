@@ -1,12 +1,24 @@
 {
   "nav": {
-    "1": "Dovednosti",
-    "2": "Portfolio",
-    "3": "Kontakt"
+    "1": {
+      "text": "Dovednosti",
+      "title": "Dovednosti"
+    },
+    "2": {
+      "text": "Portfolio",
+      "title": "Portfolio"
+    },
+    "3": {
+      "text": "Kontakt",
+      "title": "Kontakt"
+    }
   },
 
   "hero": {
-    "cta": "Domluvit si schůzku",
+    "cta": {
+      "text": "Domluvit si schůzku",
+      "title": "Domluvit si schůzku"
+    },
     "greeting": "Zdravíčko, já jsem",
     "name--alt": "Michal Hromas",
     "person--alt": "Progámator",
@@ -86,10 +98,14 @@
       "heading": "Jsem tu pro vás!",
 
       "contacts": {
-        "cta": "Zavolat",
-        "email": "michalhromas1@gmail.com",
-        "linkedin": "linkedin.com/michal-hromas",
-        "phone": "+420 606 385 691",
+        "cta": {
+          "text": "Zavolat",
+          "title": "Zavolat",
+          "href": "tel:+420606385691"
+        },
+        "email": "<a href='mailto:michalhromas1@gmail.com' title='Napsat e-mail'>michalhromas1@gmail.com</a>",
+        "linkedin": "<a href='https://www.linkedin.com/in/michal-hromas/' title='Přejít na LinkedIn profil Michala Hromase' target='_blank' rel='noopener noreferrer'>linkedin.com/michal-hromas</a>",
+        "phone": "<a href='tel:+420606385691' title='Zavolat'>+420 606 385 691</a>",
         "rate": "od 535 Kč/hod"
       },
 
@@ -98,7 +114,7 @@
         "heading": "Zanechte mi zprávu",
         "message": "Zpráva",
         "name": "Jméno / Společnost",
-        "phone": "Telefon",
+        "phone": "Telefon s předvolbou",
         "submit": "Odeslat"
       }
     }

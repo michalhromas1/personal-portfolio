@@ -1,0 +1,12 @@
+.footer-copy {
+  margin-top: -.1rem;
+  @include general-responsivity(font-size, $fs-footer-copy);
+  @include general-responsivity(padding-top, 3.2rem);
+  @include general-responsivity(padding-bottom, 3.3rem);
+  text-align: center;
+  background: $c-copy-bg;
+  color: $c-copy;
+  @include portrait-responsivity(font-size, $fs-footer-copy--portrait);
+  @include portrait-responsivity(padding-top, 2rem);
+  @include portrait-responsivity(padding-bottom, 2.1rem);
+}
