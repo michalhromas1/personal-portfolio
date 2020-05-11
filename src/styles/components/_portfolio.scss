@@ -1,0 +1,82 @@
+.portfolio {
+
+  &__grid {
+    @include general-responsivity(column-gap, 18rem);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  &__col:nth-of-type(1) {
+    text-align: right;
+  }
+
+  &__col:nth-of-type(2) {
+    text-align: center;
+  }
+
+  &__col:not(:nth-of-type(2)) {
+    @include general-responsivity(padding-top, 3.9rem);
+  }
+
+  &__logo-link {
+    display: block;
+
+    &+& {
+      @include general-responsivity(margin-top, 10.1rem);
+    }
+  }
+
+  &__col+&__col,
+  &__logo-link+&__logo-link {
+    @include portrait-responsivity(margin-top, 6.3rem);
+  }
+
+  &__logo {
+    &--red-cross {
+      @include general-responsivity(width, 11.5rem);
+      @include portrait-responsivity(width, 8.6rem);
+    }
+
+    &--biotika {
+      @include general-responsivity(width, 25.5rem);
+      @include portrait-responsivity(width, 20.9rem);
+    }
+
+    &--cvb {
+      @include general-responsivity(width, 12.5rem);
+      @include portrait-responsivity(width, 10rem);
+    }
+
+    &--fidoo {
+      @include general-responsivity(width, 14.1rem);
+      @include portrait-responsivity(width, 10rem);
+    }
+
+    &--luxatia {
+      @include general-responsivity(width, 12.7rem);
+      @include portrait-responsivity(width, 12.7rem);
+    }
+
+    &--inspishop {
+      @include general-responsivity(width, 23.5rem);
+      @include portrait-responsivity(width, 17.5rem);
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    &__grid {
+      display: block;
+    }
+
+    &__col:not(:nth-of-type(2)) {
+      padding-top: 0;
+    }
+
+    &__col,
+    &__col:nth-of-type(1) {
+      text-align: center;
+    }
+  }
+}

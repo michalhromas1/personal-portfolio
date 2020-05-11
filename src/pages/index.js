@@ -4,6 +4,7 @@ import Hero from "./../components/sections/hero"
 import About from "./../components/sections/about"
 import Usps from "./../components/sections/usps"
 import Skills from "./../components/sections/skills"
+import Portfolio from "./../components/sections/portfolio"
 import "../styles/styles.scss"
 //import SEO from "../components/seo"
 
@@ -22,6 +23,7 @@ const IndexPage = () => {
       <About />
       <Usps />
       <Skills />
+      <Portfolio />
     </div>
   )
 }

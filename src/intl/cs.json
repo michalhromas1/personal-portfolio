@@ -46,7 +46,31 @@
   },
 
   "portfolio": {
-    "heading": "Na čem jsem pracoval"
+    "heading": "Na čem jsem pracoval",
+    "red-cross": {
+      "alt": "Český Červený kříž - Logo",
+      "title": "Přejít na web Český Červený kříž"
+    },
+    "biotika": {
+      "alt": "Biotika Bohemia - Logo",
+      "title": "Přejít na web Biotika Bohemia"
+    },
+    "cvb": {
+      "alt": "CVB - Logo",
+      "title": "Přejít na web CVB"
+    },
+    "fidoo": {
+      "alt": "Fidoo - Logo",
+      "title": "Přejít na web Fidoo"
+    },
+    "luxatia": {
+      "alt": "Luxatia International - Logo",
+      "title": "Přejít na web Luxatia International"
+    },
+    "inspishop": {
+      "alt": "Inspishop - Logo",
+      "title": "Přejít na web Inspishop"
+    }
   },
 
   "footer": {
