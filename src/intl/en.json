@@ -46,7 +46,31 @@
   },
 
   "portfolio": {
-    "heading": ""
+    "heading": "",
+    "red-cross": {
+      "alt": "Czech Red Cross - Logo",
+      "title": "Go to Czech Red Cross' website"
+    },
+    "biotika": {
+      "alt": "Biotika Bohemia - Logo",
+      "title": "Go to Biotika Bohemia's website"
+    },
+    "cvb": {
+      "alt": "CVB - Logo",
+      "title": "Go to CVB's website"
+    },
+    "fidoo": {
+      "alt": "Fidoo - Logo",
+      "title": "Go to Fidoo's website"
+    },
+    "luxatia": {
+      "alt": "Luxatia International - Logo",
+      "title": "Go to Luxatia International's website"
+    },
+    "inspishop": {
+      "alt": "Inspishop - Logo",
+      "title": "Go to Inspishop's website"
+    }
   },
 
   "footer": {
