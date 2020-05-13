@@ -64,10 +64,8 @@
 
   &__learn-more {
     @include general-responsivity(bottom, -$about__margin-top + 4.8rem);
-    @include portrait-responsivity(
-      bottom,
-      -$about__margin-top--portrait + 2.5rem
-    );
+    @include portrait-responsivity(bottom,
+      -$about__margin-top--portrait + 2.5rem);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -91,10 +89,8 @@
     @include general-responsivity(font-size, $fs-main-title__greeting);
     @include general-responsivity(margin-bottom, 2.1rem);
     color: $c-hero-greeting;
-    @include portrait-responsivity(
-      font-size,
-      $fs-main-title__greeting--portrait
-    );
+    @include portrait-responsivity(font-size,
+      $fs-main-title__greeting--portrait);
     @include portrait-responsivity(margin-bottom, 0.8rem);
   }
 
@@ -142,21 +138,21 @@
   --learn-more__line--width: #{get-em(3rem, $fs-nav)};
   --learn-more__line--spacing: #{get-em(1.2rem, $fs-nav)};
   --learn-more__line--weight: #{get-em(0.3rem, $fs-nav)};
-  --learn-more__line-wrapper--width: calc(
-    var(--learn-more__line--width) * 1.414
-  ); // sqrt(2)
-  --learn-more__line-wrapper--height: calc(
-    var(--learn-more__line-wrapper--width) / 2
-  );
-  --learn-more__line-wrapper--margin-bottom: calc(
-    -1 * (var(--learn-more__line-wrapper--height) -
-          (var(--learn-more__line--spacing) + var(--learn-more__line--weight)))
-  );
+  --learn-more__line-wrapper--width: calc(var(--learn-more__line--width) * 1.414); // sqrt(2)
+  --learn-more__line-wrapper--height: calc(var(--learn-more__line-wrapper--width) / 2);
+  --learn-more__line-wrapper--margin-bottom: calc(-1 * (var(--learn-more__line-wrapper--height) - (var(--learn-more__line--spacing) + var(--learn-more__line--weight))));
   --learn-more__line--left: var(--learn-more__line-wrapper--height);
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: var(--learn-more__line-wrapper--width);
+
+  &:hover {
+
+    .learn-more__line {
+      border-color: $c-theme;
+    }
+  }
 
   &__line-wrapper {
     position: relative;
@@ -179,6 +175,7 @@
     border-bottom: var(--learn-more__line--weight) solid $c-hero-learn-more;
     transform-origin: bottom left;
     transform: rotate(-45deg);
+    transition: border-color $t-link-settings;
   }
 
   @media (orientation: portrait) and (max-width: $brp__portrait--max) {

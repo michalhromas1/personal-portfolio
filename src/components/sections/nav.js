@@ -5,14 +5,15 @@ const Nav = () => {
   const [active, toggleMenu] = useState(false)
   const intl = useIntl()
 
-  const urls = ["/#skills", "/#portfolio", "/#"]
+  const urls = ["/#skills", "/#portfolio", "/#main-footer"]
   const links = []
 
   urls.forEach((url, idx) => {
     const transPath = `nav.${idx + 1}`
     const link = {
       url,
-      text: intl.formatMessage({ id: `${transPath}` }),
+      text: intl.formatMessage({ id: `${transPath}.text` }),
+      title: intl.formatMessage({ id: `${transPath}.title` }),
     }
     links.push(link)
   })
@@ -23,7 +24,7 @@ const Nav = () => {
         {links.map((link, idx) => (
           <li className="nav-content__item" key={idx}>
             <Link
-              title={link.text}
+              title={link.title}
               className="nav-content__link smooth-scroll"
               to={link.url}
             >

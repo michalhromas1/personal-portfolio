@@ -3,8 +3,14 @@
 // Bebas Neue (400)
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@400;700&display=swap");
 
-$ssans: "Source Sans Pro", Arial, Helvetica, sans-serif;
-$bebas: "Bebas Neue", Arial, Helvetica, sans-serif;
+$ssans: "Source Sans Pro",
+Arial,
+Helvetica,
+sans-serif;
+$bebas: "Bebas Neue",
+Arial,
+Helvetica,
+sans-serif;
 
 // --- Semantic Fonts ---
 $f-body: $ssans;
@@ -40,9 +46,29 @@ $fs-about--portrait: 1.8rem;
 $fs-usp__desc: 2.9rem;
 $fs-usp__desc--portrait: 1.8rem;
 
+$fs-footer-callout__title: 5.6rem;
+$fs-footer-callout__title--portrait: 3.2rem;
+
+$fs-footer-main__title: 4.2rem;
+$fs-footer-main__title--portrait: 3rem;
+
+$fs-footer-main__contacts: 2.9rem;
+$fs-footer-main__contacts--portrait: 1.8rem;
+
+$fs-footer-main__contacts-btn: 2.7rem;
+$fs-footer-main__contacts-btn--portrait: 1.8rem;
+
+$fs-footer-form__control: 1.8rem;
+$fs-footer-form__control--portrait: 1.1rem;
+
+$fs-footer-copy: 2.4rem;
+$fs-footer-copy--portrait: 1.5rem;
+
 // --- Breakpoint Element Min Widths ---
 $max-el-width__hero: 66.4rem;
 $max-el-width__hero--portrait: 31rem;
+
+$max-el-width__form-buttons--portrait: $max-el-width__hero--portrait;
 
 $about__margin-top: -5rem;
 $about__margin-top--portrait: -2rem;
