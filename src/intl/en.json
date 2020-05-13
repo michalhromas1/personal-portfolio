@@ -1,12 +1,24 @@
 {
   "nav": {
-    "1": "Skills",
-    "2": "Portfolio",
-    "3": "Contact"
+    "1": {
+      "text": "Skills",
+      "title": "Skills"
+    },
+    "2": {
+      "text": "Portfolio",
+      "title": "Portfolio"
+    },
+    "3": {
+      "text": "Contact",
+      "title": "Contact"
+    }
   },
 
   "hero": {
-    "cta": "Get in touch",
+    "cta": {
+      "text": "Get in touch",
+      "title": "Get in touch"
+    },
     "greeting": "Hello there, I am",
     "name--alt": "Michal Hromas",
     "person--alt": "A programmer",
@@ -86,10 +98,14 @@
       "heading": "I am here for you!",
 
       "contacts": {
-        "cta": "Call",
-        "email": "michalhromas1@gmail.com",
-        "linkedin": "linkedin.com/michal-hromas",
-        "phone": "+420 606 385 691",
+        "cta": {
+          "text": "Call",
+          "title": "Call",
+          "href": "tel:+420606385691"
+        },
+        "email": "<a href='mailto:michalhromas1@gmail.com' title='Write an e-mail'>michalhromas1@gmail.com</a>",
+        "linkedin": "<a href='https://www.linkedin.com/in/michal-hromas/' title='Go to Michal Hromas' LinkedIn profil' target='_blank' rel='noopener noreferrer'>linkedin.com/michal-hromas</a>",
+        "phone": "<a href='tel:+420606385691' title='Call'>+420 606 385 691</a>",
         "rate": "from £23.5/hour"
       },
 
@@ -98,7 +114,7 @@
         "heading": "Leave me a message",
         "message": "Message",
         "name": "Name / Company",
-        "phone": "Phone",
+        "phone": "Phone with country code",
         "submit": "Submit"
       }
     }

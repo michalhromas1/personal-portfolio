@@ -44,9 +44,13 @@ const Hero = () => {
         </div>
 
         <div className="hero__button-wrapper">
-          <a href="#" className="hero__button btn btn--hero smooth-scroll">
-            {intl.formatMessage({ id: "hero.cta" })}
-          </a>
+          <Link
+            title={intl.formatMessage({ id: "hero.cta.title" })}
+            className="hero__button btn smooth-scroll"
+            to="/#main-footer"
+          >
+            {intl.formatMessage({ id: "hero.cta.text" })}
+          </Link>
         </div>
       </div>
 

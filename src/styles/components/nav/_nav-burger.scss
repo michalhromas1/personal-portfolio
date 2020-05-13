@@ -10,37 +10,39 @@ $nav-burger__transition: $t-main-nav;
   position: relative;
   font-size: inherit;
 
+  &:hover {
+
+    .nav-burger__line {
+      background-color: $c-theme;
+    }
+  }
+
   &__line {
     height: var(--nav-burger__line--height);
     background-color: $nav-burger__line--color;
-    transition: transform $nav-burger__transition;
+    transition: transform $nav-burger__transition, background-color $t-link-settings;
 
-    & + & {
+    &+& {
       margin-top: var(--nav-burger__line--spacing);
     }
 
     &:nth-of-type(2) {
-      transition-property: transform, opacity;
+      transition-property: transform, opacity, background-color;
     }
   }
 
   &--active {
     .nav-burger__line {
-      --y-offset: calc(
-        var(--nav-burger__line--spacing) + var(--nav-burger__line--height)
-      );
+      --y-offset: calc(var(--nav-burger__line--spacing) + var(--nav-burger__line--height));
 
       &:nth-of-type(1) {
         transform: translate3d(0, var(--y-offset), 0) rotate(45deg);
       }
 
       &:nth-of-type(2) {
-        transform: translate3d(
-            var(--nav-burger__line--width) / -7,
+        transform: translate3d(var(--nav-burger__line--width) / -7,
             calc(-1 * var(--nav-burger__line--spacing)),
-            0
-          )
-          rotate(-45deg);
+            0) rotate(-45deg);
         opacity: 0;
       }
 

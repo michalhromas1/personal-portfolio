@@ -1,0 +1,110 @@
+.footer-form {
+  @include general-responsivity(width, 51.6rem);
+  @include general-responsivity(column-gap, 1.6rem);
+  @include general-responsivity(row-gap, 1.6rem);
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name name"
+    "email phone"
+    "message message"
+    "submit submit";
+  @include portrait-responsivity(row-gap, 1.2rem);
+
+  &__control-wrapper {
+
+    &--name {
+      grid-area: name;
+    }
+
+    &--email {
+      grid-area: email;
+    }
+
+    &--phone {
+      grid-area: phone;
+    }
+
+    &--message {
+      grid-area: message;
+
+      textarea {
+        @include general-responsivity(height, 32rem);
+        @include general-responsivity(padding-bottom, 1.2rem);
+        @include general-responsivity(line-height, 3rem);
+        @include portrait-responsivity(height, 32rem);
+        @include portrait-responsivity(line-height, 1.8rem);
+        @include portrait-responsivity(padding-bottom, .9rem);
+      }
+    }
+
+    &--submit {
+      @include general-responsivity(margin-top, .3rem);
+      grid-area: submit;
+      @include portrait-responsivity(margin-top, .4rem);
+    }
+  }
+
+  &__control {
+    @include general-responsivity(border-width, .2rem);
+    @include general-responsivity(font-size, $fs-footer-form__control);
+    @include general-responsivity(padding-left, 1.5rem);
+    @include general-responsivity(padding-right, 1.5rem);
+    @include general-responsivity(padding-top, 1rem);
+    @include general-responsivity(padding-bottom, 1rem);
+    color: $c-primary;
+    border-style: solid;
+    border-color: $c-footer-form-borders;
+    background-color: $c-secondary;
+    @include portrait-responsivity(border-width, .2rem);
+    @include portrait-responsivity(font-size, $fs-footer-form__control--portrait);
+    @include portrait-responsivity(padding-left, .9rem);
+    @include portrait-responsivity(padding-right, .9rem);
+    @include portrait-responsivity(padding-top, .7rem);
+    @include portrait-responsivity(padding-bottom, .7rem);
+
+    &:not(.btn) {
+      transition: border-color $t-link-settings;
+
+      &:hover,
+      &:focus {
+        border-color: $c-theme;
+      }
+    }
+
+    &--submit {
+      @include footer-button;
+      width: 100%;
+      color: $c-secondary;
+      border-color: $c-secondary;
+
+      &:hover {
+        background-color: $c-secondary;
+        border-color: $c-secondary;
+        color: $c-footer-bg;
+      }
+    }
+
+    &[type="text"] {
+      @include general-responsivity(height, 4.8rem);
+      @include portrait-responsivity(height, 3.4rem);
+    }
+
+    &::placeholder {
+      color: $c-footer-form-placeholder;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "name"
+      "email"
+      "phone"
+      "message"
+      "submit";
+  }
+}

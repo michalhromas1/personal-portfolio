@@ -1,0 +1,14 @@
+@import "./footer/footer-callout";
+@import "./footer/footer-main";
+@import "./footer/footer-form";
+@import "./footer/footer-copy";
+
+.main-footer {
+  @include curved-edge;
+  overflow: hidden;
+}
+
+.footer-main__contacts-button,
+.footer-form {
+  @include portrait-responsivity(width, $max-el-width__form-buttons--portrait);
+}

@@ -1,0 +1,14 @@
+.footer-callout {
+  @include general-responsivity(padding-top, 6rem);
+  @include general-responsivity(padding-bottom, 4.9rem);
+  background: $c-callout-bg;
+  @include portrait-responsivity(padding-top, 2.9rem);
+  @include portrait-responsivity(padding-bottom, 2.2rem);
+
+  &__title {
+    @include general-responsivity(font-size, $fs-footer-callout__title);
+    line-height: 1;
+    color: $c-secondary;
+    @include portrait-responsivity(font-size, $fs-footer-callout__title--portrait);
+  }
+}
