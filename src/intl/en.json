@@ -57,6 +57,18 @@
     }
   },
 
+  "skills": {
+    "react--alt": "React",
+    "gatsby--alt": "GatsbyJS",
+    "typescript--alt": "Typescript",
+    "html--alt": "HTML 5, CSS 3 and Javascript",
+    "git--alt": "Git",
+    "angular--alt": "Angular",
+    "sass--alt": "Sass",
+    "xd--alt": "Adobe Xd",
+    "netlify--alt": "Netlify"
+  },
+
   "portfolio": {
     "heading": "",
     "red-cross": {
