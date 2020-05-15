@@ -1,4 +1,5 @@
 .portfolio {
+  @include portrait-responsivity(padding-bottom, 4.9rem);
 
   &__grid {
     @include general-responsivity(column-gap, 18rem);
@@ -9,19 +10,35 @@
   }
 
   &__col:nth-of-type(1) {
-    text-align: right;
+    justify-self: flex-end;
+
+    .portfolio__logo-link {
+      margin-left: auto;
+    }
   }
 
   &__col:nth-of-type(2) {
-    text-align: center;
+    justify-self: center;
+
+    .portfolio__logo-link {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__col:nth-of-type(3) {
+    justify-self: flex-start;
+
+    .portfolio__logo-link {
+      margin-right: auto;
+    }
   }
 
   &__col:not(:nth-of-type(2)) {
     @include general-responsivity(padding-top, 3.9rem);
   }
 
-  &__logo-link {
-    display: block;
+  &__logo-link-wrapper {
 
     &+& {
       @include general-responsivity(margin-top, 10.1rem);
@@ -29,39 +46,51 @@
   }
 
   &__col+&__col,
-  &__logo-link+&__logo-link {
-    @include portrait-responsivity(margin-top, 6.3rem);
+  &__logo-link-wrapper+&__logo-link-wrapper {
+    @include portrait-responsivity(margin-top, 5.5rem);
   }
 
   &__logo {
+    transition: transform $t-link-settings;
+    transform: scale(1);
+    width: 100%;
+  }
+
+  &__logo-link {
+    display: block;
+
+    &:hover .portfolio__logo {
+      transform: scale(1.05);
+    }
+
     &--red-cross {
       @include general-responsivity(width, 11.5rem);
-      @include portrait-responsivity(width, 8.6rem);
+      @include portrait-responsivity(width, 8rem);
     }
 
     &--biotika {
       @include general-responsivity(width, 25.5rem);
-      @include portrait-responsivity(width, 20.9rem);
+      @include portrait-responsivity(width, 17.5rem);
     }
 
     &--cvb {
       @include general-responsivity(width, 12.5rem);
-      @include portrait-responsivity(width, 10rem);
+      @include portrait-responsivity(width, 8.5rem);
     }
 
     &--fidoo {
       @include general-responsivity(width, 14.1rem);
-      @include portrait-responsivity(width, 10rem);
+      @include portrait-responsivity(width, 9rem);
     }
 
     &--luxatia {
       @include general-responsivity(width, 12.7rem);
-      @include portrait-responsivity(width, 12.7rem);
+      @include portrait-responsivity(width, 10rem);
     }
 
     &--inspishop {
       @include general-responsivity(width, 23.5rem);
-      @include portrait-responsivity(width, 17.5rem);
+      @include portrait-responsivity(width, 14rem);
     }
   }
 
@@ -77,6 +106,11 @@
     &__col,
     &__col:nth-of-type(1) {
       text-align: center;
+    }
+
+    &__logo-link {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }

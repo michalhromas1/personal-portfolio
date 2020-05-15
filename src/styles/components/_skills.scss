@@ -77,7 +77,7 @@
     &--html {
       @include general-responsivity(width, 23.4rem);
       @include portrait-responsivity(width, 15.5rem);
-      @include portrait-responsivity(margin-top, 3.3rem);
+      @include portrait-responsivity(margin-top, 1.9rem);
     }
 
     &--git {
