@@ -18,88 +18,100 @@ const Portfolio = () => {
         </h2>
         <div className="grid portfolio__grid">
           <div className="portfolio__col">
-            <a
-              href="https://daruj.cervenykriz.eu"
-              className="portfolio__logo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={intl.formatMessage({ id: `portfolio.red-cross.title` })}
-            >
-              <img
-                className="portfolio__logo portfolio__logo--red-cross"
-                src={RedCross}
-                alt={intl.formatMessage({ id: `portfolio.red-cross.alt` })}
-              />
-            </a>
-            <a
-              href="https://www.biotika.net"
-              className="portfolio__logo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={intl.formatMessage({ id: `portfolio.biotika.title` })}
-            >
-              <img
-                alt={intl.formatMessage({ id: `portfolio.biotika.alt` })}
-                className="portfolio__logo portfolio__logo--biotika"
-                src={Biotika}
-              />
-            </a>
+            <div className="portfolio__logo-link-wrapper">
+              <a
+                href="https://daruj.cervenykriz.eu"
+                className="portfolio__logo-link portfolio__logo-link--red-cross"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={intl.formatMessage({ id: `portfolio.red-cross.title` })}
+              >
+                <img
+                  alt={intl.formatMessage({ id: `portfolio.red-cross.alt` })}
+                  className="portfolio__logo"
+                  src={RedCross}
+                />
+              </a>
+            </div>
+            <div className="portfolio__logo-link-wrapper">
+              <a
+                href="https://www.biotika.net"
+                className="portfolio__logo-link portfolio__logo-link--biotika"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={intl.formatMessage({ id: `portfolio.biotika.title` })}
+              >
+                <img
+                  alt={intl.formatMessage({ id: `portfolio.biotika.alt` })}
+                  className="portfolio__logo"
+                  src={Biotika}
+                />
+              </a>
+            </div>
           </div>
           <div className="portfolio__col">
-            <a
-              href="https://www.ventilatory-shop.cz/"
-              className="portfolio__logo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={intl.formatMessage({ id: `portfolio.cvb.title` })}
-            >
-              <img
-                alt={intl.formatMessage({ id: `portfolio.cvb.alt` })}
-                className="portfolio__logo portfolio__logo--cvb"
-                src={CVB}
-              />
-            </a>
-            <a
-              href="https://www.fidoo.com"
-              className="portfolio__logo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={intl.formatMessage({ id: `portfolio.fidoo.title` })}
-            >
-              <img
-                alt={intl.formatMessage({ id: `portfolio.fidoo.alt` })}
-                className="portfolio__logo portfolio__logo--fidoo"
-                src={Fidoo}
-              />
-            </a>
+            <div className="portfolio__logo-link-wrapper">
+              <a
+                href="https://www.ventilatory-shop.cz/"
+                className="portfolio__logo-link portfolio__logo-link--cvb"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={intl.formatMessage({ id: `portfolio.cvb.title` })}
+              >
+                <img
+                  alt={intl.formatMessage({ id: `portfolio.cvb.alt` })}
+                  className="portfolio__logo"
+                  src={CVB}
+                />
+              </a>
+            </div>
+            <div className="portfolio__logo-link-wrapper">
+              <a
+                href="https://www.fidoo.com"
+                className="portfolio__logo-link portfolio__logo-link--fidoo"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={intl.formatMessage({ id: `portfolio.fidoo.title` })}
+              >
+                <img
+                  alt={intl.formatMessage({ id: `portfolio.fidoo.alt` })}
+                  className="portfolio__logo"
+                  src={Fidoo}
+                />
+              </a>
+            </div>
           </div>
           <div className="portfolio__col">
-            <a
-              href="https://www.luxatiainternational.com"
-              className="portfolio__logo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={intl.formatMessage({ id: `portfolio.luxatia.title` })}
-            >
-              <img
-                alt={intl.formatMessage({ id: `portfolio.luxatia.alt` })}
-                className="portfolio__logo portfolio__logo--luxatia"
-                src={Luxatia}
-              />
-            </a>
-            <a
-              href="https://www.inspishop.cz"
-              className="portfolio__logo-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title={intl.formatMessage({ id: `portfolio.inspishop.title` })}
-            >
-              <img
-                alt={intl.formatMessage({ id: `portfolio.inspishop.alt` })}
-                className="portfolio__logo portfolio__logo--inspishop"
-                src={Inspishop}
-              />
-            </a>
+            <div className="portfolio__logo-link-wrapper">
+              <a
+                href="https://www.luxatiainternational.com"
+                className="portfolio__logo-link portfolio__logo-link--luxatia"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={intl.formatMessage({ id: `portfolio.luxatia.title` })}
+              >
+                <img
+                  alt={intl.formatMessage({ id: `portfolio.luxatia.alt` })}
+                  className="portfolio__logo"
+                  src={Luxatia}
+                />
+              </a>
+            </div>
+            <div className="portfolio__logo-link-wrapper">
+              <a
+                href="https://www.inspishop.cz"
+                className="portfolio__logo-link portfolio__logo-link--inspishop"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={intl.formatMessage({ id: `portfolio.inspishop.title` })}
+              >
+                <img
+                  alt={intl.formatMessage({ id: `portfolio.inspishop.alt` })}
+                  className="portfolio__logo"
+                  src={Inspishop}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
