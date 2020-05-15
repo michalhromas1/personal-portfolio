@@ -1,4 +1,6 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
+import Notification from "./../components/notification"
 import Header from "./../components/sections/header"
 import Hero from "./../components/sections/hero"
 import About from "./../components/sections/about"
@@ -10,6 +12,8 @@ import "../styles/styles.scss"
 //import SEO from "../components/seo"
 
 const IndexPage = () => {
+  const intl = useIntl()
+
   if (typeof window !== "undefined") {
     require("smooth-scroll")(".smooth-scroll")
   }
@@ -17,6 +21,14 @@ const IndexPage = () => {
   return (
     <div>
       {/* <SEO title="Home" /> */}
+      <Notification
+        notification={{
+          text: intl.formatMessage({
+            id: `notifications.available`,
+          }),
+          type: "success",
+        }}
+      />
       <div className="landing-wrapper">
         <Header />
         <Hero />

@@ -1,0 +1,232 @@
+.notification {
+  @include general-responsivity(font-size, $fs-notification);
+  @include general-responsivity(padding-top, 2.1rem);
+  @include general-responsivity(padding-bottom, 2.2rem);
+  @include general-responsivity(padding-left, 3rem);
+  @include general-responsivity(padding-right, 5.6rem);
+  @include general-responsivity(top, 6.3rem);
+  @include general-responsivity(right, 7.7rem);
+  @include general-responsivity(border-radius, .4rem);
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+  animation-name: reveal;
+  animation-duration: 500ms;
+  animation-delay: 5s;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  box-shadow: 0 1px 3px $c-notification__success--close-bg, 0 1px 2px darken($c-notification__success--close-bg, 5%);
+  @include portrait-responsivity(font-size, $fs-notification--portrait);
+  @include portrait-responsivity(padding-top, 1.7rem);
+  @include portrait-responsivity(padding-bottom, 1.7rem);
+  @include portrait-responsivity(padding-left, 3.5rem);
+  @include portrait-responsivity(padding-right, 3.5rem);
+
+  &__close {
+    @include general-responsivity(top, 1.2rem);
+    @include general-responsivity(right, 1.2rem);
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition: transform $t-link-settings;
+    @include portrait-responsivity(top, 1.5rem);
+    @include portrait-responsivity(right, 1.2rem);
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__close-line {
+    position: absolute;
+    width: 1.2rem;
+    height: .2rem;
+
+    &:nth-of-type(1) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-of-type(2) {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--success {
+    color: $c-notification__success;
+    background: $c-notification__success--bg;
+
+    .notification {
+
+      &__close {
+        background: $c-notification__success--close-bg;
+      }
+
+      &__close-line {
+        background: $c-notification__success--close;
+      }
+    }
+  }
+
+  &--hide {
+    animation-name: hide;
+    animation-delay: unset;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateX(225%) skewX(12deg);
+    }
+
+    40% {
+      opacity: 1;
+      transform: translateX(0) skewX(12deg);
+    }
+
+    60% {
+      transform: translateX(0) skewX(-5deg);
+    }
+
+    85% {
+      transform: translateX(0) skewX(3deg);
+    }
+
+    to {
+      transform: translateX(0) skewX(0);
+    }
+  }
+
+  @keyframes hide {
+    from {
+      transform: translateX(0) skewX(0);
+    }
+
+    65% {
+      opacity: 1;
+      transform: translateX(-6.7%) skewX(9deg);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateX(225%) skewX(-100deg);
+    }
+  }
+
+  @media (max-width: 1680px) {
+    &__close {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    &__close-line {
+      width: 1rem;
+    }
+  }
+
+  @media (max-width: 1445px) {
+    &__close {
+      width: 1.9rem;
+      height: 1.9rem;
+    }
+
+    &__close-line {
+      height: .1rem;
+      width: .9rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__close {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &__close-line {
+      width: .7rem;
+    }
+  }
+
+  @media (max-width: 880px) {
+    &__close {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    &__close-line {
+      width: .5rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    &__close {
+      width: .7rem;
+      height: .7rem;
+    }
+
+    &__close-line {
+      width: .3rem;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    text-align: center;
+
+    &__close {
+      width: 2.9rem;
+      height: 2.9rem;
+    }
+
+    &__close-line {
+      width: 1.3rem;
+      height: .3rem;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: 540px) {
+    &__close {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &__close-line {
+      width: 1.1rem;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: 470px) {
+    &__close {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    &__close-line {
+      width: 1rem;
+      height: .2rem;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: 400px) {
+    &__close {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &__close-line {
+      width: .8rem;
+    }
+  }
+}

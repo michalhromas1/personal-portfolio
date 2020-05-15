@@ -2,7 +2,7 @@
 $c-yellow: #FECB2F;
 
 $c-green: #4EC677;
-$c-green--d1: #4EC677;
+$c-green--d1: #40A061;
 
 $c-black--l1: #0F0F0F;
 $c-black--l2: #1F1F1F;
@@ -32,9 +32,12 @@ $c-footer-form-borders: $c-black--l5;
 $c-footer-form-placeholder: lighten($c-primary, 25);
 
 $c-body-bg: $c-white;
-$c-notification-bg: $c-green;
-$c-notification-close-bg: $c-green--d1;
 $c-skills-bg: $c-white--d1;
 $c-callout-bg: $c-black--l3;
 $c-footer-bg: $c-black--l2;
 $c-copy-bg: $c-black--l1;
+
+$c-notification__success: $c-white--d2;
+$c-notification__success--bg: $c-green;
+$c-notification__success--close: $c-white--d2;
+$c-notification__success--close-bg: $c-green--d1;
