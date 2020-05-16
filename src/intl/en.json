@@ -134,7 +134,8 @@
         "submit": {
           "text": "Submit",
           "title": "Submit the form"
-        }
+        },
+        "required": "These fields are required"
       }
     }
   },
