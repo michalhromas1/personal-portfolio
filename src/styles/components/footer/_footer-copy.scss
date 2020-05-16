@@ -1,12 +1,64 @@
 .footer-copy {
   margin-top: -.1rem;
   @include general-responsivity(font-size, $fs-footer-copy);
-  @include general-responsivity(padding-top, 3.2rem);
-  @include general-responsivity(padding-bottom, 3.3rem);
-  text-align: center;
+  @include general-responsivity(padding-top, 2.9rem);
+  @include general-responsivity(padding-bottom, 2.8rem);
   background: $c-copy-bg;
-  color: $c-copy;
   @include portrait-responsivity(font-size, $fs-footer-copy--portrait);
-  @include portrait-responsivity(padding-top, 2rem);
-  @include portrait-responsivity(padding-bottom, 2.1rem);
+  @include portrait-responsivity(padding-top, 1.8rem);
+  @include portrait-responsivity(padding-bottom, 1.7rem);
+
+  &,
+  a {
+    color: $c-copy;
+  }
+
+  a {
+    @include link-hover;
+  }
+
+  &__content {
+    @include general-responsivity(padding-right, 6rem);
+    @include general-responsivity(padding-left, 6rem);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "none attributions copy";
+  }
+
+  &__text {
+    grid-area: copy;
+    justify-self: flex-end;
+    @include portrait-responsivity(margin-top, 1rem);
+  }
+
+  &__attributions {
+    grid-area: attributions;
+    @include portrait-responsivity(line-height, 2.1rem);
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    text-align: center;
+
+    &__content,
+    small {
+      display: block;
+    }
+
+    &__content {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+
+    &__attributions {
+
+      br {
+        display: inline;
+      }
+    }
+  }
 }

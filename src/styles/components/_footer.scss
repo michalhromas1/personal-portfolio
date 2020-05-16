@@ -9,6 +9,7 @@
 }
 
 .footer-main__contacts-button,
-.footer-form {
+.footer-form,
+.footer-copy__content {
   @include portrait-responsivity(width, $max-el-width__form-buttons--portrait);
 }
