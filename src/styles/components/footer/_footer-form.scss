@@ -16,7 +16,6 @@
   &__required-desc {
     @include general-responsivity(font-size, $fs-footer-form__required-desc);
     grid-area: required;
-    text-align: right;
     @include portrait-responsivity(font-size, $fs-footer-form__required-desc--portrait);
   }
 
