@@ -10,14 +10,14 @@ const FooterForm = () => {
           {intl.formatMessage({ id: "footer.main.form.name" })}
         </label>
         <input
-          className="footer-form__control"
+          className="footer-form__control footer-form__required"
           type="text"
           placeholder={intl.formatMessage({ id: "footer.main.form.name" })}
           name="name"
           id="name"
         />
       </div>
-      <div className="footer-form__control-wrapper footer-form__control-wrapper--email">
+      <div className="footer-form__control-wrapper footer-form__control-wrapper--email footer-form__control-wrapper--required">
         <label htmlFor="email" className="sr-only">
           {intl.formatMessage({ id: "footer.main.form.email" })}
         </label>
@@ -41,7 +41,7 @@ const FooterForm = () => {
           id="phone"
         />
       </div>
-      <div className="footer-form__control-wrapper footer-form__control-wrapper--message">
+      <div className="footer-form__control-wrapper footer-form__control-wrapper--message footer-form__control-wrapper--required">
         <label htmlFor="message" className="sr-only">
           {intl.formatMessage({ id: "footer.main.form.message" })}
         </label>
@@ -61,6 +61,10 @@ const FooterForm = () => {
           {intl.formatMessage({ id: "footer.main.form.submit.text" })}
         </button>
       </div>
+      <p className="footer-form__required-desc">
+        <span className="footer-form__required-symbol">* </span>
+        {intl.formatMessage({ id: "footer.main.form.required" })}
+      </p>
     </form>
   )
 }
