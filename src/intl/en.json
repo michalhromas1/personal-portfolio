@@ -119,7 +119,7 @@
           "href": "tel:+420606385691"
         },
         "email": "<a href='mailto:michalhromas1@gmail.com' title='Write an e-mail'>michalhromas1@gmail.com</a>",
-        "linkedin": "<a href='https://www.linkedin.com/in/michal-hromas/' title='Go to Michal Hromas' LinkedIn profil' target='_blank' rel='noopener noreferrer'>linkedin.com/michal-hromas</a>",
+        "linkedin": "<a href=\"https://www.linkedin.com/in/michal-hromas/\" title=\"Go to Michal Hromas' LinkedIn profile\" target=\"_blank\" rel=\"noopener noreferrer\">linkedin.com/michal-hromas</a>",
         "phone": "<a href='tel:+420606385691' title='Call'>+420 606 385 691</a>",
         "rate": "from £23.5/hour"
       },
@@ -137,6 +137,10 @@
         },
         "required": "These fields are required"
       }
+    },
+
+    "copy": {
+      "attributions": "Illustrations acquired from <a href=\"https://www.flaticon.com/authors/vectors-market\" title=\"Go to Vectors Market's Flaticon profile\" target=\"_blank\" rel=\"noopener noreferrer\">Vectors Market</a> and <br/><a href=\"https://www.flaticon.com/authors/dinosoftlabs\" title=\"Go to DinosoftLabs's Flaticon profile\" target=\"_blank\" rel=\"noopener noreferrer\">DinosoftLabs</a> from <a href=\"https://www.flaticon.com/\" title=\"Go to Flaticon's website\" target=\"_blank\" rel=\"noopener noreferrer\">flaticon.com</a> and <a href=\"https://undraw.co/\" title=\"Go to unDraw's website\" target=\"_blank\" rel=\"noopener noreferrer\">undraw.co</a>"
     }
   },
 
