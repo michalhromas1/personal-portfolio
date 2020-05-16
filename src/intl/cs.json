@@ -137,6 +137,10 @@
         },
         "required": "Tato pole jsou povinná"
       }
+    },
+
+    "copy": {
+      "attributions": "Ilustrace převzaty z <a href='https://www.flaticon.com/authors/vectors-market' title='Přejít na Flaticon profil Vectors Market' target='_blank' rel='noopener noreferrer'>Vectors Market</a> a <br/><a href='https://www.flaticon.com/authors/dinosoftlabs' title='Přejít na Flaticon profil DinosoftLabs' target='_blank' rel='noopener noreferrer'>DinosoftLabs</a> z <a href='https://www.flaticon.com/' title='Přejít na web \"Flaticon\"' target='_blank' rel='noopener noreferrer'>flaticon.com</a> a <a href='https://undraw.co/' title='Přejít na web \"unDraw\"' target='_blank' rel='noopener noreferrer'>undraw.co</a>"
     }
   },
 

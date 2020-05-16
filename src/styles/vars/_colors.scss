@@ -33,7 +33,8 @@ $c-hero-learn-more: $c-white--d4;
 $c-copy: $c-black--l5;
 $c-footer-form-borders: $c-black--l5;
 $c-footer-form-placeholder: lighten($c-primary, 25);
-$c-footer-form-required: $c-red;
+$c-footer-form-required: darken($c-secondary, 50);
+$c-footer-form-required--symbol: $c-red;
 
 $c-body-bg: $c-white;
 $c-skills-bg: $c-white--d1;
