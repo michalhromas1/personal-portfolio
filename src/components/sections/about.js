@@ -6,6 +6,7 @@ const About = () => {
 
   return (
     <section className="about container" id="about">
+      <h2 className="sr-only">{intl.formatMessage({ id: "about.heading" })}</h2>
       <p
         className="about__text"
         dangerouslySetInnerHTML={{
