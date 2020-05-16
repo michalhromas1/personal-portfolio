@@ -9,8 +9,24 @@
     "name name"
     "email phone"
     "message message"
-    "submit submit";
+    "submit submit"
+    "required required";
   @include portrait-responsivity(row-gap, 1.2rem);
+
+  &__required-desc {
+    @include general-responsivity(font-size, $fs-footer-form__required-desc);
+    grid-area: required;
+    @include portrait-responsivity(font-size, $fs-footer-form__required-desc--portrait);
+  }
+
+  &__required-symbol {
+    @include general-responsivity(font-size, $fs-footer-form__required-symbol);
+    @include general-responsivity(top, .6rem);
+    position: relative;
+    color: $c-footer-form-required;
+    @include portrait-responsivity(font-size, $fs-footer-form__required-symbol--portrait);
+    @include portrait-responsivity(top, .5rem);
+  }
 
   &__control-wrapper {
 
@@ -43,6 +59,29 @@
       @include general-responsivity(margin-top, .3rem);
       grid-area: submit;
       @include portrait-responsivity(margin-top, .4rem);
+    }
+
+    &--required {
+      position: relative;
+
+      &::after {
+        @include general-responsivity(top, .8rem);
+        @include general-responsivity(right, .8rem);
+        @include general-responsivity(font-size, $fs-footer-form__required-symbol);
+        content: "*";
+        color: $c-footer-form-required;
+        position: absolute;
+        @include portrait-responsivity(top, .8rem);
+        @include portrait-responsivity(right, .8rem);
+        @include portrait-responsivity(font-size, $fs-footer-form__required-symbol--portrait);
+      }
+    }
+
+    &--required-hidden {
+
+      &::after {
+        content: none;
+      }
     }
   }
 
@@ -106,6 +145,7 @@
       "email"
       "phone"
       "message"
-      "submit";
+      "submit"
+      "required";
   }
 }

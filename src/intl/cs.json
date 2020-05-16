@@ -134,7 +134,8 @@
         "submit": {
           "text": "Odeslat",
           "title": "Odeslat formulář"
-        }
+        },
+        "required": "Tato pole jsou povinná"
       }
     }
   },
