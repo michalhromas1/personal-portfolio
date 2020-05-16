@@ -59,8 +59,11 @@
   &__logo-link {
     display: block;
 
-    &:hover .portfolio__logo {
-      transform: scale(1.05);
+    &:hover,
+    &:focus {
+      .portfolio__logo {
+        transform: scale(1.05);
+      }
     }
 
     &--red-cross {

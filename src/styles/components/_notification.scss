@@ -41,7 +41,8 @@
     @include portrait-responsivity(top, 1.5rem);
     @include portrait-responsivity(right, 1.2rem);
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: scale(1.1);
     }
   }

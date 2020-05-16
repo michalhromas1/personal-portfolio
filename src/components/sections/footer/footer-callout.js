@@ -7,7 +7,12 @@ const FooterCallout = () => {
     <div className="footer-callout">
       <div className="container">
         <h2 className="footer-callout__title">
-          {intl.formatMessage({ id: `footer.callout.heading` })}
+          <span aria-hidden="true">
+            {intl.formatMessage({ id: `footer.callout.heading` })}
+          </span>
+          <span className="sr-only">
+            {intl.formatMessage({ id: `footer.callout.heading--sr-only` })}
+          </span>
         </h2>
       </div>
     </div>

@@ -9,7 +9,7 @@ const Nav = () => {
   const links = []
 
   urls.forEach((url, idx) => {
-    const transPath = `nav.${idx + 1}`
+    const transPath = `nav.links.${idx + 1}`
     const link = {
       url,
       text: intl.formatMessage({ id: `${transPath}.text` }),
@@ -35,11 +35,11 @@ const Nav = () => {
       </ul>
 
       <button
-        role="button"
         className={`main-nav__burger nav-burger ${
           active ? "nav-burger--active" : ""
         }`}
         onClick={() => toggleMenu(!active)}
+        title={intl.formatMessage({ id: `nav.burger--title` })}
       >
         <div className="nav-burger__line"></div>
         <div className="nav-burger__line"></div>
