@@ -147,8 +147,8 @@
   margin-right: auto;
   width: var(--learn-more__line-wrapper--width);
 
-  &:hover {
-
+  &:hover,
+  &:focus {
     .learn-more__line {
       border-color: $c-theme;
     }

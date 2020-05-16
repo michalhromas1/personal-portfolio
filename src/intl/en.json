@@ -1,28 +1,31 @@
 {
   "nav": {
-    "1": {
-      "text": "Skills",
-      "title": "Skills"
-    },
-    "2": {
-      "text": "Portfolio",
-      "title": "Portfolio"
-    },
-    "3": {
-      "text": "Contact",
-      "title": "Contact"
+    "burger--title": "Show / Hide main navigation",
+    "links": {
+      "1": {
+        "text": "Skills",
+        "title": "Scroll to \"Skills\" section"
+      },
+      "2": {
+        "text": "Portfolio",
+        "title": "Scroll to \"Portfolio\" section"
+      },
+      "3": {
+        "text": "Contact",
+        "title": "Scroll to \"Contacts\" section"
+      }
     }
   },
 
   "hero": {
     "cta": {
       "text": "Get in touch",
-      "title": "Get in touch"
+      "title": "Scroll to \"Contacts\" section"
     },
     "greeting": "Hello there, I am",
     "name--alt": "Michal Hromas",
     "person--alt": "A programmer",
-    "learn-more--title": "Learn more",
+    "learn-more--title": "Scroll to \"About me\" section",
 
     "job": {
       "designer": "Web Designer",
@@ -32,6 +35,7 @@
   },
 
   "about": {
+    "heading": "About me",
     "desc": ""
   },
 
@@ -41,7 +45,7 @@
     "1": {
       "desc": "",
       "heading": "Fast",
-      "icon--alt": "A rocket"
+      "icon--alt": "A spaceship"
     },
 
     "2": {
@@ -58,6 +62,7 @@
   },
 
   "skills": {
+    "heading": "Skills",
     "react--alt": "React",
     "gatsby--alt": "GatsbyJS",
     "typescript--alt": "Typescript",
@@ -99,15 +104,13 @@
 
   "footer": {
     "callout": {
-      "heading": ""
-    },
-
-    "copy": {
-      "desc": "Michal Hromas &copy;2020"
+      "heading": "",
+      "heading--sr-only": "Contacts"
     },
 
     "main": {
       "heading": "I am here for you!",
+      "heading--sr-only": "Contacts",
 
       "contacts": {
         "cta": {
@@ -124,15 +127,20 @@
       "form": {
         "email": "E-mail",
         "heading": "Leave me a message",
+        "heading--sr-only": "Contact form",
         "message": "Message",
         "name": "Name / Company",
         "phone": "Phone with country code",
-        "submit": "Submit"
+        "submit": {
+          "text": "Submit",
+          "title": "Submit the form"
+        }
       }
     }
   },
 
   "notifications": {
-    "available": "I am currently <strong>accepting</strong> new clients"
+    "available": "I am currently <strong>accepting</strong> new clients",
+    "close--title": "Close notification"
   }
 }

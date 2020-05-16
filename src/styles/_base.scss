@@ -11,9 +11,14 @@ img {
   font-size: 62.5%;
 }
 
+body,
+input:not([type="submit"]),
+textarea {
+  font-family: $f-body;
+}
+
 body {
   @include general-responsivity(font-size, $fs-body);
-  font-family: $f-body;
   background: $c-body-bg;
   color: $c-primary;
   @include portrait-responsivity(font-size, $fs-body--portrait);
@@ -66,7 +71,7 @@ input[type="submit"] {
   padding: 0;
   border: none;
   background: inherit;
-  outline: none; // TODO: style outline
+  outline: none;
 }
 
 .btn,
@@ -113,7 +118,8 @@ section {
   margin-left: auto;
   margin-right: auto;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $c-white;
     border-color: $c-theme;
     background-color: $c-theme;
@@ -129,7 +135,7 @@ form {
     margin: 0;
     padding: 0;
     width: 100%;
-    outline: none; // todo: add outline
+    outline: none;
     max-width: 100%;
     max-height: 100%;
   }

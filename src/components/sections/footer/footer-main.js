@@ -12,7 +12,12 @@ const FooterMain = () => {
     <div className="footer-main">
       <div className="container">
         <h3 className="footer-main__title">
-          {intl.formatMessage({ id: `footer.main.heading` })}
+          <span aria-hidden="true">
+            {intl.formatMessage({ id: `footer.main.heading` })}
+          </span>
+          <span className="sr-only">
+            {intl.formatMessage({ id: `footer.main.heading--sr-only` })}
+          </span>
         </h3>
         <div className="grid footer-main__grid">
           <div className="footer-main__contacts-wrapper">
@@ -104,7 +109,14 @@ const FooterMain = () => {
           </div>
           <div className="footer-main__form-wrapper">
             <h3 className="footer-main__title footer-main__title--form">
-              {intl.formatMessage({ id: `footer.main.form.heading` })}
+              <span aria-hidden="true">
+                {intl.formatMessage({ id: `footer.main.form.heading` })}
+              </span>
+              <span className="sr-only">
+                {intl.formatMessage({
+                  id: `footer.main.form.heading--sr-only`,
+                })}
+              </span>
             </h3>
             <FooterForm />
           </div>

@@ -10,8 +10,8 @@ $nav-burger__transition: $t-main-nav;
   position: relative;
   font-size: inherit;
 
-  &:hover {
-
+  &:hover,
+  &:focus {
     .nav-burger__line {
       background-color: $c-theme;
     }

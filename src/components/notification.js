@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import { injectIntl } from "gatsby-plugin-intl"
 
 class Notification extends Component {
   state = {
@@ -13,6 +14,7 @@ class Notification extends Component {
   render() {
     const { hide } = this.state
     const { text, type } = this.props.notification
+    const { intl } = this.props
     let classList = "notification"
     classList += type ? ` notification--${type}` : ""
     classList += hide ? " notification--hide" : ""
@@ -24,10 +26,14 @@ class Notification extends Component {
             __html: text,
           }}
         ></p>
-        <div className="notification__close" onClick={this.hide}>
+        <button
+          className="notification__close"
+          onClick={this.hide}
+          title={intl.formatMessage({ id: "notifications.close--title" })}
+        >
           <div className="notification__close-line"></div>
           <div className="notification__close-line"></div>
-        </div>
+        </button>
       </div>
     )
   }
@@ -40,4 +46,4 @@ Notification.propTypes = {
   }).isRequired,
 }
 
-export default Notification
+export default injectIntl(Notification)

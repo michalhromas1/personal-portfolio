@@ -19,12 +19,12 @@
     @include general-responsivity(font-size, $fs-footer-main__title);
     @include general-responsivity(margin-bottom, 5.2rem);
     color: $c-theme;
-    display: none;
     @include portrait-responsivity(font-size, $fs-footer-main__title--portrait);
     @include portrait-responsivity(margin-bottom, 2.2rem);
 
     &--form {
       color: $c-secondary;
+      display: none;
     }
   }
 

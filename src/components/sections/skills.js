@@ -16,6 +16,9 @@ const Skills = () => {
 
   return (
     <section className="skills" id="skills">
+      <h2 className="sr-only">
+        {intl.formatMessage({ id: "skills.heading" })}
+      </h2>
       <div
         className="skills__content-wrapper"
         style={{ backgroundImage: `url("${SkillsBg}")` }}
