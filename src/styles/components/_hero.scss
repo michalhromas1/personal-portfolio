@@ -21,12 +21,6 @@
     @include portrait-responsivity(top, $about__margin-top--portrait / 2);
   }
 
-  &__title,
-  &__button-wrapper {
-    justify-self: start;
-    @include general-responsivity(margin-left, 10.3rem);
-  }
-
   &__title {
     grid-area: title;
     align-self: end;
