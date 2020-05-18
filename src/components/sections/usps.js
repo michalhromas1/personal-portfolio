@@ -24,9 +24,12 @@ const Usps = () => {
   return (
     <section className="usps" id="usps">
       <div className="container">
-        <h2 className="usps__title">
-          {intl.formatMessage({ id: "usps.heading" })}
-        </h2>
+        <h2
+          className="usps__title"
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "usps.heading" }),
+          }}
+        ></h2>
         <div className="grid usps__grid">
           {usps.map((usp, idx) => (
             <Usp usp={usp} key={idx} />
