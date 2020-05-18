@@ -13,9 +13,12 @@ const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
-        <h2 className="portfolio__title">
-          {intl.formatMessage({ id: "portfolio.heading" })}
-        </h2>
+        <h2
+          className="portfolio__title"
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: "portfolio.heading" }),
+          }}
+        ></h2>
         <div className="grid portfolio__grid">
           <div className="portfolio__col">
             <div className="portfolio__logo-link-wrapper">

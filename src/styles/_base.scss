@@ -144,3 +144,11 @@ form {
     resize: none;
   }
 }
+
+.hidden--landscape {
+  display: none;
+
+  @media (orientation: portrait) and (max-width: $brp__portrait--max) {
+    display: initial;
+  }
+}
