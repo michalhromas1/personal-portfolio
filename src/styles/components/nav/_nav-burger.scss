@@ -52,6 +52,51 @@ $nav-burger__transition: $t-main-nav;
     }
   }
 
+  @media (min-width: 2250px) {
+    --nav-burger__line--height: 0.4rem;
+    --nav-burger__line--spacing: 0.8rem;
+  }
+
+  @media (min-width: 2900px) {
+    --nav-burger__line--height: 0.5rem;
+    --nav-burger__line--spacing: 1.1rem;
+  }
+
+  @media (min-width: 3550px) {
+    --nav-burger__line--height: 0.6rem;
+    --nav-burger__line--spacing: 1.3rem;
+  }
+
+  @media (min-width: 4200px) {
+    --nav-burger__line--height: 0.7rem;
+    --nav-burger__line--spacing: 1.5rem;
+  }
+
+  @media (min-width: 4800px) {
+    --nav-burger__line--height: 0.8rem;
+    --nav-burger__line--spacing: 1.7rem;
+  }
+
+  @media (min-width: 5450px) {
+    --nav-burger__line--height: 0.9rem;
+    --nav-burger__line--spacing: 2rem;
+  }
+
+  @media (min-width: 6100px) {
+    --nav-burger__line--height: 1rem;
+    --nav-burger__line--spacing: 2.2rem;
+  }
+
+  @media (min-width: 6750px) {
+    --nav-burger__line--height: 1.1rem;
+    --nav-burger__line--spacing: 2.5rem;
+  }
+
+  @media (min-width: 7350px) {
+    --nav-burger__line--height: 1.2rem;
+    --nav-burger__line--spacing: 2.7rem;
+  }
+
   @media (max-width: 1785px) {
     --nav-burger__line--spacing: 0.6rem;
   }
