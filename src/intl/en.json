@@ -36,26 +36,26 @@
 
   "about": {
     "heading": "About me",
-    "desc": ""
+    "desc": "<strong>It's been over four years since I have fallen in love with web development and I dare to say it's a love for the whole life.</strong> I code and design both UI and UX. I follow the latest trends and technologies and give my 110% to every project. That's because the joy I bring upon others with my skills translates back to me as well. I will be delighted to help you create such a website that will bring a smile to the face of everyone, who stumbles upon them. Scroll down to see what I can offer you and what I worked on. <strong>Do you need a website? Feel free to call me or write an e-mail.</strong>"
   },
 
   "usps": {
-    "heading": "",
+    "heading": "The websites <br class='hidden--landscape'>I create",
 
     "1": {
-      "desc": "",
+      "desc": "Ensuring blazing fast loading time and smooth, lag-free experience is my highest priority",
       "heading": "Fast",
       "icon--alt": "A spaceship"
     },
 
     "2": {
-      "desc": "",
+      "desc": "I always seek the best compromise between nice graphics of a website and its good readability",
       "heading": "Intuitive",
       "icon--alt": "A lightbulb"
     },
 
     "3": {
-      "desc": "",
+      "desc": "I create websites in such a way that they look great on all devices - desktops, phones and tablets",
       "heading": "Responsive",
       "icon--alt": "A smartphone"
     }
@@ -75,7 +75,7 @@
   },
 
   "portfolio": {
-    "heading": "",
+    "heading": "What I <br class='hidden--landscape'>worked on",
     "red-cross": {
       "alt": "Czech Red Cross - Logo",
       "title": "Go to Czech Red Cross' website"
@@ -104,7 +104,7 @@
 
   "footer": {
     "callout": {
-      "heading": "",
+      "heading": "Do you want a cool website?",
       "heading--sr-only": "Contacts"
     },
 
