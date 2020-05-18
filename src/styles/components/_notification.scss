@@ -123,6 +123,177 @@
     }
   }
 
+  @media (min-width: 2400px) {
+    &__close {
+      width: 2.9rem;
+      height: 2.9rem;
+    }
+
+    &__close-line {
+      height: .3rem;
+      width: 1.5rem;
+    }
+  }
+
+  @media (min-width: 2650px) {
+    &__close {
+      width: 3.3rem;
+      height: 3.3rem;
+    }
+
+    &__close-line {
+      width: 1.7rem;
+    }
+  }
+
+  @media (min-width: 3000px) {
+    &__close {
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
+    &__close-line {
+      width: 1.9rem;
+    }
+  }
+
+  @media (min-width: 3400px) {
+    &__close {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+
+    &__close-line {
+      height: .4rem;
+      width: 2.2rem;
+    }
+  }
+
+  @media (min-width: 3800px) {
+    &__close {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+
+    &__close-line {
+      width: 2.4rem;
+    }
+  }
+
+  @media (min-width: 4400px) {
+    &__close {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+
+    &__close-line {
+      height: .5rem;
+      width: 2.7rem;
+    }
+  }
+
+  @media (min-width: 4600px) {
+    &__close {
+      width: 5.7rem;
+      height: 5.7rem;
+    }
+
+    &__close-line {
+      width: 2.9rem;
+    }
+  }
+
+  @media (min-width: 4900px) {
+    &__close {
+      width: 6.1rem;
+      height: 6.1rem;
+    }
+
+    &__close-line {
+      width: 3.1rem;
+    }
+  }
+
+  @media (min-width: 5300px) {
+    &__close {
+      width: 6.6rem;
+      height: 6.6rem;
+    }
+
+    &__close-line {
+      height: .6rem;
+      width: 3.4rem;
+    }
+  }
+
+  @media (min-width: 5700px) {
+    &__close {
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+
+    &__close-line {
+      width: 3.6rem;
+    }
+  }
+
+  @media (min-width: 6300px) {
+    &__close {
+      width: 7.9rem;
+      height: 7.9rem;
+    }
+
+    &__close-line {
+      height: .7rem;
+      width: 3.9rem;
+    }
+  }
+
+  @media (min-width: 6650px) {
+    &__close {
+      width: 8.3rem;
+      height: 8.3rem;
+    }
+
+    &__close-line {
+      width: 4.1rem;
+    }
+  }
+
+  @media (min-width: 6800px) {
+    &__close {
+      width: 8.5rem;
+      height: 8.5rem;
+    }
+
+    &__close-line {
+      width: 4.3rem;
+    }
+  }
+
+  @media (min-width: 7300px) {
+    &__close {
+      width: 9.2rem;
+      height: 9.2rem;
+    }
+
+    &__close-line {
+      height: .8rem;
+      width: 4.6rem;
+    }
+  }
+
+  @media (min-width: 7600px) {
+    &__close {
+      width: 9.6rem;
+      height: 9.6rem;
+    }
+
+    &__close-line {
+      width: 4.8rem;
+    }
+  }
+
   @media (max-width: 1680px) {
     &__close {
       width: 2.2rem;
