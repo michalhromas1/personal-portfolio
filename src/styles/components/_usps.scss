@@ -1,4 +1,7 @@
 .usps {
+  padding-bottom: 0;
+  @include portrait-responsivity(padding-bottom, 6.3rem);
+
   &__grid {
     @include general-responsivity(column-gap, 18rem);
     @include general-responsivity(margin-bottom, -0.7rem);

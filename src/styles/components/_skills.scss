@@ -1,5 +1,8 @@
 .skills {
-  padding: 0;
+  @include general-responsivity(padding-top, 12.3rem);
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   @include portrait-responsivity(padding-top, 4.5rem);
   @include portrait-responsivity(padding-bottom, 3.2rem);
 
@@ -51,11 +54,10 @@
   }
 
   &__item {
-
     &--react {
       @include general-responsivity(width, 24rem);
       @include general-responsivity(margin-right, -1.5rem);
-      @include general-responsivity(margin-top, .1rem);
+      @include general-responsivity(margin-top, 0.1rem);
       @include portrait-responsivity(width, 17rem);
     }
 
@@ -64,7 +66,7 @@
       @include general-responsivity(margin-right, 5.8rem);
       @include general-responsivity(margin-top, 1.3rem);
       @include portrait-responsivity(width, 16rem);
-      @include portrait-responsivity(margin-top, .3rem);
+      @include portrait-responsivity(margin-top, 0.3rem);
     }
 
     &--typescript {
