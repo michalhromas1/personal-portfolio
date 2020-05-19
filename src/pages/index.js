@@ -1,5 +1,6 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
+import Fade from "react-reveal/Fade"
 import Notification from "./../components/notification"
 import Header from "./../components/sections/header"
 import Hero from "./../components/sections/hero"
@@ -13,13 +14,14 @@ import "../styles/styles.scss"
 
 const IndexPage = () => {
   const intl = useIntl()
+  const animationDelay = 200
 
   if (typeof window !== "undefined") {
     require("smooth-scroll")(".smooth-scroll")
   }
 
   return (
-    <div>
+    <div className="oh">
       {/* <SEO title="Home" /> */}
       <Notification
         notification={{
@@ -33,7 +35,9 @@ const IndexPage = () => {
         <Header />
         <Hero />
       </div>
-      <About />
+      <Fade bottom duration={1800} delay={animationDelay}>
+        <About />
+      </Fade>
       <Usps />
       <Skills />
       <Portfolio />

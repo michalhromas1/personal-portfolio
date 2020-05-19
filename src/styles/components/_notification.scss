@@ -6,7 +6,7 @@
   @include general-responsivity(padding-right, 5.6rem);
   @include general-responsivity(top, 6.3rem);
   @include general-responsivity(right, 7.7rem);
-  @include general-responsivity(border-radius, .4rem);
+  @include general-responsivity(border-radius, 0.4rem);
   overflow: hidden;
   position: fixed;
   z-index: 100;
@@ -17,7 +17,13 @@
   animation-direction: normal;
   animation-fill-mode: both;
   animation-iteration-count: 1;
-  box-shadow: 0 1px 3px $c-notification__success--close-bg, 0 1px 2px darken($c-notification__success--close-bg, 5%);
+  --notification-box-shadow--1: #{get-em(0.1rem, $fs-notification)};
+  --notification-box-shadow--2: #{get-em(0.3rem, $fs-notification)};
+  --notification-box-shadow--3: #{get-em(0.2rem, $fs-notification)};
+  box-shadow: 0 var(--notification-box-shadow--1)
+      var(--notification-box-shadow--2) $c-notification__success--close-bg,
+    0 var(--notification-box-shadow--1) var(--notification-box-shadow--3)
+      darken($c-notification__success--close-bg, 5%);
   @include portrait-responsivity(font-size, $fs-notification--portrait);
   @include portrait-responsivity(padding-top, 1.7rem);
   @include portrait-responsivity(padding-bottom, 1.7rem);
@@ -50,7 +56,7 @@
   &__close-line {
     position: absolute;
     width: 1.2rem;
-    height: .2rem;
+    height: 0.2rem;
 
     &:nth-of-type(1) {
       transform: rotate(45deg);
@@ -66,7 +72,6 @@
     background: $c-notification__success--bg;
 
     .notification {
-
       &__close {
         background: $c-notification__success--close-bg;
       }
@@ -130,7 +135,7 @@
     }
 
     &__close-line {
-      height: .3rem;
+      height: 0.3rem;
       width: 1.5rem;
     }
   }
@@ -164,7 +169,7 @@
     }
 
     &__close-line {
-      height: .4rem;
+      height: 0.4rem;
       width: 2.2rem;
     }
   }
@@ -187,7 +192,7 @@
     }
 
     &__close-line {
-      height: .5rem;
+      height: 0.5rem;
       width: 2.7rem;
     }
   }
@@ -221,7 +226,7 @@
     }
 
     &__close-line {
-      height: .6rem;
+      height: 0.6rem;
       width: 3.4rem;
     }
   }
@@ -244,7 +249,7 @@
     }
 
     &__close-line {
-      height: .7rem;
+      height: 0.7rem;
       width: 3.9rem;
     }
   }
@@ -278,7 +283,7 @@
     }
 
     &__close-line {
-      height: .8rem;
+      height: 0.8rem;
       width: 4.6rem;
     }
   }
@@ -312,8 +317,8 @@
     }
 
     &__close-line {
-      height: .1rem;
-      width: .9rem;
+      height: 0.1rem;
+      width: 0.9rem;
     }
   }
 
@@ -324,7 +329,7 @@
     }
 
     &__close-line {
-      width: .7rem;
+      width: 0.7rem;
     }
   }
 
@@ -335,18 +340,18 @@
     }
 
     &__close-line {
-      width: .5rem;
+      width: 0.5rem;
     }
   }
 
   @media (max-width: 560px) {
     &__close {
-      width: .7rem;
-      height: .7rem;
+      width: 0.7rem;
+      height: 0.7rem;
     }
 
     &__close-line {
-      width: .3rem;
+      width: 0.3rem;
     }
   }
 
@@ -356,6 +361,9 @@
     top: 0;
     border-radius: 0;
     text-align: center;
+    --notification-box-shadow--1: #{get-em(0.1rem, $fs-notification--portrait)};
+    --notification-box-shadow--2: #{get-em(0.3rem, $fs-notification--portrait)};
+    --notification-box-shadow--3: #{get-em(0.2rem, $fs-notification--portrait)};
 
     &__close {
       width: 2.9rem;
@@ -364,7 +372,7 @@
 
     &__close-line {
       width: 1.3rem;
-      height: .3rem;
+      height: 0.3rem;
     }
   }
 
@@ -387,7 +395,7 @@
 
     &__close-line {
       width: 1rem;
-      height: .2rem;
+      height: 0.2rem;
     }
   }
 
@@ -398,7 +406,7 @@
     }
 
     &__close-line {
-      width: .8rem;
+      width: 0.8rem;
     }
   }
 }
