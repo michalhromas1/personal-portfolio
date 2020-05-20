@@ -1,29 +1,28 @@
 // --- Vendor ---
-@import './vendor/reset';
-@import './vendor/sr-only';
-
+@import "./vendor/reset";
+@import "./vendor/sr-only";
 
 // --- Helpers ---
-@import './vars/base-vars';
-@import './helpers';
-
+@import "./vars/base-vars";
+@import "./helpers";
 
 // --- Vars ---
-@import './vars/fonts';
-@import './vars/colors';
-@import './vars/animations';
-
+@import "./vars/fonts";
+@import "./vars/colors";
+@import "./vars/animations";
 
 // --- Base ---
-@import './base';
-
+@import "./base";
 
 // --- Components ---
-@import './components/notification';
-@import './components/header';
-@import './components/hero';
-@import './components/about';
-@import './components/usps';
-@import './components/skills';
-@import './components/portfolio';
-@import './components/footer';
+@import "./components/notification";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/usps";
+@import "./components/skills";
+@import "./components/portfolio";
+@import "./components/footer";
+
+// --- Pages ---
+@import "./pages/404";

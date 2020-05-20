@@ -1,25 +1,23 @@
 // --- Base Colors ---
-$c-yellow: #FECB2F;
+$c-yellow: #fecb2f;
 
-$c-green: #4EC677;
-$c-green--d1: #40A061;
+$c-green: #4ec677;
+$c-green--d1: #40a061;
 
-$c-red: #FE2F2F;
+$c-red: #fe2f2f;
 
-
-$c-black--l1: #0F0F0F;
-$c-black--l2: #1F1F1F;
+$c-black--l1: #0f0f0f;
+$c-black--l2: #1f1f1f;
 $c-black--l3: #292929;
 $c-black--l4: #535461;
 $c-black--l5: #555555;
 
-$c-white: #FFFFFF;
-$c-white--d1: #F6F8F9;
-$c-white--d2: #FAFAFA;
-$c-white--d3: #EBEFF0;
-$c-white--d4: #E8ECED;
-$c-white--d5: #E1E5E6;
-
+$c-white: #ffffff;
+$c-white--d1: #f6f8f9;
+$c-white--d2: #fafafa;
+$c-white--d3: #ebeff0;
+$c-white--d4: #e8eced;
+$c-white--d5: #e1e5e6;
 
 // --- Semantic Colors ---
 $c-theme: $c-yellow;
@@ -46,3 +44,5 @@ $c-notification__success: $c-white--d2;
 $c-notification__success--bg: $c-green;
 $c-notification__success--close: $c-white--d2;
 $c-notification__success--close-bg: $c-green--d1;
+
+$c-404-title__desc: $c-white--d4;

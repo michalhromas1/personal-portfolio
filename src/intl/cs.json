@@ -147,5 +147,15 @@
   "notifications": {
     "available": "V současnosti <strong>přijímám</strong> nové klienty",
     "close--title": "Zavřít notifikaci"
+  },
+
+  "error": {
+    "btn--go-home": {
+      "text": "Přejít na hlavní stránku",
+      "title": "Přejít na hlavní stránku"
+    },
+    "code": {
+      "404": "Taková <br class='hidden--landscape'>stránka tu není"
+    }
   }
 }
