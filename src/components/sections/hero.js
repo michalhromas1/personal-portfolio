@@ -13,7 +13,7 @@ const Hero = () => {
     <section className="hero container" id="hero">
       <div className="hero__content">
         <Fade right cascade duration={1000} delay={animationDelay}>
-          <h1 className="main-title hero__title">
+          <h1 className="main-title hero__title animated">
             <div className="main-title__greeting">
               {intl.formatMessage({ id: "hero.greeting" })}
             </div>
@@ -40,7 +40,7 @@ const Hero = () => {
         </Fade>
 
         <Fade left duration={2000} delay={animationDelay}>
-          <div className="hero__person-wrapper">
+          <div className="hero__person-wrapper animated">
             <img
               alt={intl.formatMessage({ id: "hero.person--alt" })}
               className="hero__person"
@@ -50,7 +50,7 @@ const Hero = () => {
         </Fade>
 
         <Fade right duration={2000} delay={animationDelay}>
-          <div className="hero__button-wrapper">
+          <div className="hero__button-wrapper animated">
             <Link
               title={intl.formatMessage({ id: "hero.cta.title" })}
               className="hero__button btn smooth-scroll"
@@ -68,10 +68,10 @@ const Hero = () => {
         to="/#about"
       >
         <Fade top duration={1800} delay={animationDelay}>
-          <div className="learn-more__line-wrapper">
+          <div className="learn-more__line-wrapper animated">
             <div className="learn-more__line"></div>
           </div>
-          <div className="learn-more__line-wrapper">
+          <div className="learn-more__line-wrapper animated">
             <div className="learn-more__line"></div>
           </div>
         </Fade>

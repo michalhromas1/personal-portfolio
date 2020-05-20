@@ -36,7 +36,9 @@ const IndexPage = () => {
         <Hero />
       </div>
       <Fade bottom duration={1800} delay={animationDelay}>
-        <About />
+        <div className="animated">
+          <About />
+        </div>
       </Fade>
       <Usps />
       <Skills />
