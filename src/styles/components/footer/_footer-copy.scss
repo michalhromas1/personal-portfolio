@@ -1,5 +1,5 @@
 .footer-copy {
-  margin-top: -.1rem;
+  margin-top: -0.1rem;
   @include general-responsivity(font-size, $fs-footer-copy);
   @include general-responsivity(padding-top, 2.9rem);
   @include general-responsivity(padding-bottom, 2.8rem);
@@ -20,12 +20,19 @@
   &__content {
     @include general-responsivity(padding-right, 6rem);
     @include general-responsivity(padding-left, 6rem);
+  }
+
+  &:not(&--no-attribution) &__content {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas: "none attributions copy";
   }
 
-  &__text {
+  &--no-attribution &__content {
+    text-align: center;
+  }
+
+  &:not(&--no-attribution) &__text {
     grid-area: copy;
     justify-self: flex-end;
     @include portrait-responsivity(margin-top, 1rem);
@@ -43,7 +50,7 @@
   @media (orientation: portrait) and (max-width: $brp__portrait--max) {
     text-align: center;
 
-    &__content,
+    &:not(&--no-attribution) &__content,
     small {
       display: block;
     }
@@ -55,7 +62,6 @@
     }
 
     &__attributions {
-
       br {
         display: inline;
       }
