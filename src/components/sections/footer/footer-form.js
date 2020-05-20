@@ -28,7 +28,7 @@ const FooterForm = () => {
         </label>
         <input
           className="footer-form__control"
-          type="text"
+          type="email"
           placeholder={intl.formatMessage({ id: "footer.main.form.email" })}
           name="email"
           id="email"
