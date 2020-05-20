@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Michal Hromas | Web Developer & Designer`,
-    description: `Welcome to my Michal Hromas' portfolio site. Web development, web design.`,
-    author: `@gatsbyjs`,
+    description: `Welcome to Michal Hromas' portfolio site, web developer & designer`,
+    author: `Michal Hromas`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Michal Hromas' Portfolio`,
+        short_name: `Hromas`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#FECB2F`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-sass`,

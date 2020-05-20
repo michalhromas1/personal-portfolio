@@ -10,7 +10,7 @@ import Skills from "./../components/sections/skills"
 import Portfolio from "./../components/sections/portfolio"
 import Footer from "./../components/sections/footer"
 import "../styles/styles.scss"
-//import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const IndexPage = () => {
   const intl = useIntl()
@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   return (
     <div className="oh">
-      {/* <SEO title="Home" /> */}
+      <SEO title="Michal Hromas | Web Developer & Designer" />
       <Notification
         notification={{
           text: intl.formatMessage({
