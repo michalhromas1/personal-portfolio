@@ -8,7 +8,9 @@ const NotFoundPage = () => {
   const intl = useIntl()
 
   if (typeof window !== "undefined") {
-    require("smooth-scroll")(".smooth-scroll")
+    require("smooth-scroll")(".smooth-scroll", {
+      updateURL: false,
+    })
   }
 
   return (
