@@ -10,6 +10,7 @@ const FooterForm = () => {
       name="contact"
       method="POST"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <div className="footer-form__control-wrapper footer-form__control-wrapper--name">
         <label htmlFor="name" className="sr-only">
           {intl.formatMessage({ id: "footer.main.form.name" })}
