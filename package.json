@@ -2,7 +2,7 @@
   "name": "michal-hromas-portfolio-site",
   "private": true,
   "description": "Michal Hromas' Portfolio Site",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Michal Hromas <michalhromas1@gmail.com>",
   "dependencies": {
     "gatsby": "^2.22.0",
