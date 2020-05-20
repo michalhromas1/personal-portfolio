@@ -4,9 +4,7 @@
 
   @if $exponent < 0 {
     @return $base;
-  }
-
-  @else if $exponent !=0 {
+  } @else if $exponent !=0 {
     @for $i from 0 to $exponent {
       $value: $value * $base;
     }
@@ -31,15 +29,18 @@
 }
 
 @function get-fluid-size($min-size-in-rems, $related-viewport-width-in-px) {
-  $result: (($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000) * 1vw;
+  $result: (
+      ($min-size-in-rems / 1rem) / ($related-viewport-width-in-px / 1px) * 1000
+    ) * 1vw;
   @return floor-to-precision($result);
 }
 
 @function get-fluid-stop($size-fluid, $fluid-to-in-px) {
-  $fluid-stop: floor-to-precision((($fluid-to-in-px / 1px) * ($size-fluid / 1vw) / 1000) * 1rem);
+  $fluid-stop: floor-to-precision(
+    (($fluid-to-in-px / 1px) * ($size-fluid / 1vw) / 1000) * 1rem
+  );
   @return $fluid-stop;
 }
-
 
 // --- Mixins ---
 @mixin general-responsivity($property, $init-size-in-rem) {
@@ -83,8 +84,41 @@
   @include general-responsivity(padding-top, 1.8rem);
   @include general-responsivity(padding-bottom, 1.4rem);
   @include general-responsivity(border-width, 0.2rem);
-  @include portrait-responsivity(font-size, $fs-footer-main__contacts-btn--portrait);
+  @include portrait-responsivity(
+    font-size,
+    $fs-footer-main__contacts-btn--portrait
+  );
   @include portrait-responsivity(padding-top, 1.3rem);
   @include portrait-responsivity(padding-bottom, 0.9rem);
   @include portrait-responsivity(border-width, 0.2rem);
+}
+
+@mixin main-button {
+  @include general-responsivity(font-size, $fs-hero__btn);
+  @include general-responsivity(width, $max-el-width__hero);
+  @include general-responsivity(padding-top, 2.6rem);
+  @include general-responsivity(padding-bottom, 2rem);
+  @include general-responsivity(border-width, 0.3rem);
+  @include portrait-responsivity(font-size, $fs-hero__btn--portrait);
+  @include portrait-responsivity(width, $max-el-width__hero--portrait);
+  @include portrait-responsivity(padding-top, 1.3rem);
+  @include portrait-responsivity(padding-bottom, 0.8rem);
+  @include portrait-responsivity(border-width, 0.2rem);
+}
+
+@mixin vh100 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin main-title {
+  @include general-responsivity(font-size, $fs-main-title__greeting);
+  @include portrait-responsivity(font-size, $fs-main-title__greeting--portrait);
+}
+
+@mixin main-title__subtitle {
+  @include general-responsivity(font-size, $fs-main-title__jobs);
+  @include portrait-responsivity(font-size, $fs-main-title__jobs--portrait);
 }

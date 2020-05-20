@@ -1,0 +1,22 @@
+.page-404 {
+  @include vh100;
+
+  &__main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    @include main-title;
+    @include general-responsivity(margin-bottom, 3.3rem);
+    color: $c-primary;
+    @include portrait-responsivity(margin-bottom, 0.5rem);
+    @include portrait-responsivity(line-height, 5.3rem);
+  }
+
+  &__button {
+    @include main-button;
+  }
+}

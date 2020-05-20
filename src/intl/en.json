@@ -147,5 +147,15 @@
   "notifications": {
     "available": "I am currently <strong>accepting</strong> new clients",
     "close--title": "Close notification"
+  },
+
+  "error": {
+    "btn--go-home": {
+      "text": "Go to the homepage",
+      "title": "Go to the homepage"
+    },
+    "code": {
+      "404": "There is no <br class='hidden--landscape'>such page here"
+    }
   }
 }
