@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 const FooterForm = () => {
   const intl = useIntl()
   return (
-    <form className="footer-form">
+    <form className="footer-form" netlify name="contact" method="POST">
       <div className="footer-form__control-wrapper footer-form__control-wrapper--name">
         <label htmlFor="name" className="sr-only">
           {intl.formatMessage({ id: "footer.main.form.name" })}
