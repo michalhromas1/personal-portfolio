@@ -22,7 +22,7 @@ const Nav = () => {
 
   return (
     <Fade right duration={2000} delay={animationDelay}>
-      <nav className="main-nav" role="navigation">
+      <nav className="main-nav animated" role="navigation">
         <ul className={`nav-content ${active ? "nav-content--active" : ""}`}>
           {links.map((link, idx) => (
             <li className="nav-content__item" key={idx}>
