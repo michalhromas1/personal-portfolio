@@ -9,6 +9,7 @@ const FooterForm = () => {
       data-netlify="true"
       name="contact"
       method="POST"
+      action="/"
     >
       <div className="footer-form__control-wrapper footer-form__control-wrapper--name">
         <label htmlFor="name" className="sr-only">
