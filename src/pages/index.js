@@ -31,6 +31,7 @@ const IndexPage = () => {
             id: `notifications.available`,
           }),
           type: "success",
+          delay: true,
         }}
       />
       <div className="landing-wrapper">

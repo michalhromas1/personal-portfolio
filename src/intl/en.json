@@ -146,7 +146,11 @@
 
   "notifications": {
     "available": "I am currently <strong>accepting</strong> new clients",
-    "close--title": "Close notification"
+    "close--title": "Close notification",
+    "form": {
+      "success": "Awesome! <br class='hidden--landscape'>The message was sent",
+      "error": "Something went wrong, <br class='hidden--landscape'>the message was not sent"
+    }
   },
 
   "error": {
