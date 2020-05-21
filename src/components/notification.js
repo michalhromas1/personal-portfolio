@@ -9,6 +9,9 @@ class Notification extends Component {
 
   hide = () => {
     this.setState({ hide: true })
+    setTimeout(() => {
+      this.props.hidden()
+    }, 500)
   }
 
   render() {
@@ -46,6 +49,7 @@ Notification.propTypes = {
     type: PropTypes.string,
     delay: PropTypes.bool,
   }).isRequired,
+  hidden: PropTypes.func,
 }
 
 export default injectIntl(Notification)

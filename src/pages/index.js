@@ -33,6 +33,7 @@ const IndexPage = () => {
           type: "success",
           delay: true,
         }}
+        hidden={() => {}}
       />
       <div className="landing-wrapper">
         <Header />
