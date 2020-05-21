@@ -71,9 +71,9 @@
 .main-title {
   &__greeting {
     @include main-title;
-    @include general-responsivity(margin-bottom, 2.1rem);
+    @include general-responsivity(margin-bottom, 2.3rem);
     color: $c-hero-greeting;
-    @include portrait-responsivity(margin-bottom, 0.8rem);
+    @include portrait-responsivity(margin-bottom, 1rem);
   }
 
   &__name {
