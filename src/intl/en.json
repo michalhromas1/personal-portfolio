@@ -118,10 +118,23 @@
           "title": "Call",
           "href": "tel:+420606385691"
         },
-        "email": "<a href='mailto:michalhromas1@gmail.com' title='Write an e-mail'>michalhromas1@gmail.com</a>",
-        "linkedin": "<a href=\"https://www.linkedin.com/in/michal-hromas/\" title=\"Go to Michal Hromas' LinkedIn profile\" target=\"_blank\" rel=\"noopener noreferrer\">linkedin.com/michal-hromas</a>",
-        "phone": "<a href='tel:+420606385691' title='Call'>+420 606 385 691</a>",
-        "rate": "from £20/hour"
+        "email": {
+          "text": "<a href='mailto:michalhromas1@gmail.com' title='Write an e-mail'>michalhromas1@gmail.com</a>",
+          "icon--alt": "An envelope"
+        },
+        "linkedin": {
+          "text": "<a href=\"https://www.linkedin.com/in/michal-hromas/\" title=\"Go to Michal Hromas' LinkedIn profile\" target=\"_blank\" rel=\"noopener noreferrer\">linkedin.com/michal-hromas</a>",
+          "icon--alt": "LinkedIn - Logo"
+        },
+        "github": {
+          "text": "<a href=\"https://github.com/michalhromas1\" title=\"Go to Michal Hromas' GitHub profile\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/michalhromas1</a>",
+          "icon--alt": "GitHub - Logo"
+        },
+        "phone": {
+          "text": "<a href='tel:+420606385691' title='Call'>+420 606 385 691</a>",
+          "icon--alt": "A phone"
+        },
+        "rate": { "text": "from £20/hour", "icon--alt": "Coins" }
       },
 
       "form": {

@@ -118,10 +118,23 @@
           "title": "Zavolat",
           "href": "tel:+420606385691"
         },
-        "email": "<a href='mailto:michalhromas1@gmail.com' title='Napsat e-mail'>michalhromas1@gmail.com</a>",
-        "linkedin": "<a href='https://www.linkedin.com/in/michal-hromas/' title='Přejít na LinkedIn profil Michala Hromase' target='_blank' rel='noopener noreferrer'>linkedin.com/michal-hromas</a>",
-        "phone": "<a href='tel:+420606385691' title='Zavolat'>+420 606 385 691</a>",
-        "rate": "od 500 Kč/hod"
+        "email": {
+          "text": "<a href='mailto:michalhromas1@gmail.com' title='Napsat e-mail'>michalhromas1@gmail.com</a>",
+          "icon--alt": "Dopisní obálka"
+        },
+        "linkedin": {
+          "text": "<a href='https://www.linkedin.com/in/michal-hromas/' title='Přejít na LinkedIn profil Michala Hromase' target='_blank' rel='noopener noreferrer'>linkedin.com/michal-hromas</a>",
+          "icon--alt": "LinkedIn - Logo"
+        },
+        "github": {
+          "text": "<a href='https://github.com/michalhromas1' title='Přejít na GitHub profil Michala Hromase' target='_blank' rel='noopener noreferrer'>github.com/michalhromas1</a>",
+          "icon--alt": "GitHub - Logo"
+        },
+        "phone": {
+          "text": "<a href='tel:+420606385691' title='Zavolat'>+420 606 385 691</a>",
+          "icon--alt": "Telefonní sluchátko"
+        },
+        "rate": { "text": "od 500 Kč/hod", "icon--alt": "Mince" }
       },
 
       "form": {
