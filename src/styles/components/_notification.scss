@@ -12,7 +12,6 @@
   z-index: 100;
   animation-name: reveal;
   animation-duration: 500ms;
-  animation-delay: 5s;
   animation-timing-function: ease-in-out;
   animation-direction: normal;
   animation-fill-mode: both;
@@ -20,15 +19,18 @@
   --notification-box-shadow--1: #{get-em(0.1rem, $fs-notification)};
   --notification-box-shadow--2: #{get-em(0.3rem, $fs-notification)};
   --notification-box-shadow--3: #{get-em(0.2rem, $fs-notification)};
+  --notification-box-shadow--color1: #333;
+  --notification-box-shadow--color2: #000;
   box-shadow: 0 var(--notification-box-shadow--1)
-      var(--notification-box-shadow--2) $c-notification__success--close-bg,
+      var(--notification-box-shadow--2) var(--notification-box-shadow--color1),
     0 var(--notification-box-shadow--1) var(--notification-box-shadow--3)
-      darken($c-notification__success--close-bg, 5%);
+      var(--notification-box-shadow--color2);
   @include portrait-responsivity(font-size, $fs-notification--portrait);
-  @include portrait-responsivity(padding-top, 1.7rem);
-  @include portrait-responsivity(padding-bottom, 1.7rem);
+  @include portrait-responsivity(padding-top, 1.4rem);
+  @include portrait-responsivity(padding-bottom, 1.4rem);
   @include portrait-responsivity(padding-left, 3.5rem);
   @include portrait-responsivity(padding-right, 3.5rem);
+  @include portrait-responsivity(line-height, 2.7rem);
 
   &__close {
     @include general-responsivity(top, 1.2rem);
@@ -68,6 +70,11 @@
   }
 
   &--success {
+    --notification-box-shadow--color1: #{$c-notification__success--close-bg};
+    --notification-box-shadow--color2: #{darken(
+        $c-notification__success--close-bg,
+        5%
+      )};
     color: $c-notification__success;
     background: $c-notification__success--bg;
 
@@ -80,6 +87,30 @@
         background: $c-notification__success--close;
       }
     }
+  }
+
+  &--error {
+    --notification-box-shadow--color1: #{$c-notification__error--close-bg};
+    --notification-box-shadow--color2: #{darken(
+        $c-notification__error--close-bg,
+        5%
+      )};
+    color: $c-notification__error;
+    background: $c-notification__error--bg;
+
+    .notification {
+      &__close {
+        background: $c-notification__error--close-bg;
+      }
+
+      &__close-line {
+        background: $c-notification__error--close;
+      }
+    }
+  }
+
+  &--delay {
+    animation-delay: 5s;
   }
 
   &--hide {

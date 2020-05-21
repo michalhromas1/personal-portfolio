@@ -13,10 +13,11 @@ class Notification extends Component {
 
   render() {
     const { hide } = this.state
-    const { text, type } = this.props.notification
+    const { text, type, delay } = this.props.notification
     const { intl } = this.props
     let classList = "notification"
     classList += type ? ` notification--${type}` : ""
+    classList += delay ? ` notification--delay` : ""
     classList += hide ? " notification--hide" : ""
     return (
       <div className={classList}>
@@ -43,6 +44,7 @@ Notification.propTypes = {
   notification: PropTypes.exact({
     text: PropTypes.string.isRequired,
     type: PropTypes.string,
+    delay: PropTypes.bool,
   }).isRequired,
 }
 
