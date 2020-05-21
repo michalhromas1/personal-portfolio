@@ -28,8 +28,8 @@ class FooterForm extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({ "form-name": "contact", ...this.state }),
     })
-      .then(() => this.notify())
-      .catch(() => this.notify(true))
+      .then(this.notify())
+      .catch(this.notify(true))
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -69,8 +69,9 @@ class FooterForm extends Component {
           />
         )}
         <form
-          data-netlify="true"
           className="footer-form"
+          data-netlify="true"
+          name="contact"
           onSubmit={this.handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
