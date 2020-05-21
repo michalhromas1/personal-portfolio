@@ -26,11 +26,11 @@
     0 var(--notification-box-shadow--1) var(--notification-box-shadow--3)
       var(--notification-box-shadow--color2);
   @include portrait-responsivity(font-size, $fs-notification--portrait);
-  @include portrait-responsivity(padding-top, 1.3rem);
-  @include portrait-responsivity(padding-bottom, 1.3rem);
+  @include portrait-responsivity(padding-top, 1.4rem);
+  @include portrait-responsivity(padding-bottom, 1.4rem);
   @include portrait-responsivity(padding-left, 3.5rem);
   @include portrait-responsivity(padding-right, 3.5rem);
-  @include portrait-responsivity(line-height, 2.4rem);
+  @include portrait-responsivity(line-height, 2.7rem);
 
   &__close {
     @include general-responsivity(top, 1.2rem);
