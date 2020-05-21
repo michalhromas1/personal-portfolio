@@ -2,8 +2,8 @@
   @include general-responsivity(padding-top, 5.6rem);
   @include general-responsivity(padding-bottom, 6.3rem);
   background: $c-footer-bg;
-  margin-top: -.1rem;
-  @include portrait-responsivity(padding-top, 4.4rem);
+  margin-top: -0.1rem;
+  @include portrait-responsivity(padding-top, 4.3rem);
   @include portrait-responsivity(padding-bottom, 2.5rem);
 
   &,
@@ -20,7 +20,7 @@
     @include general-responsivity(margin-bottom, 5.2rem);
     color: $c-theme;
     @include portrait-responsivity(font-size, $fs-footer-main__title--portrait);
-    @include portrait-responsivity(margin-bottom, 2.2rem);
+    @include portrait-responsivity(margin-bottom, 2.1rem);
 
     &--form {
       color: $c-secondary;
@@ -43,13 +43,16 @@
   &__contacts-wrapper {
     @include general-responsivity(font-size, $fs-footer-main__contacts);
     grid-area: contacts;
-    @include portrait-responsivity(font-size, $fs-footer-main__contacts--portrait);
+    @include portrait-responsivity(
+      font-size,
+      $fs-footer-main__contacts--portrait
+    );
   }
 
   &__form-wrapper {
     grid-area: form;
     margin-left: auto;
-    @include portrait-responsivity(margin-top, 4.8rem);
+    @include portrait-responsivity(margin-top, 4.6rem);
   }
 
   &__contacts-item {
@@ -60,7 +63,7 @@
       text-decoration: underline;
     }
 
-    &+& {
+    & + & {
       @include general-responsivity(margin-top, 2.2rem);
       @include portrait-responsivity(margin-top, 2rem);
     }
@@ -75,9 +78,9 @@
   }
 
   &__contacts-text {
-    @include general-responsivity(top, -.3rem);
+    @include general-responsivity(top, -0.3rem);
     position: relative;
-    @include portrait-responsivity(top, -.2rem);
+    @include portrait-responsivity(top, -0.2rem);
   }
 
   &__contacts-button-wrapper {
@@ -90,7 +93,6 @@
   }
 
   @media (orientation: portrait) and (max-width: $brp__portrait--max) {
-
     &__grid {
       display: block;
     }
