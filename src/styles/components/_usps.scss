@@ -38,7 +38,7 @@
     @include general-responsivity(margin-top, 4.8rem);
     @include general-responsivity(margin-bottom, 2.5rem);
     @include portrait-responsivity(margin-top, 3.5rem);
-    @include portrait-responsivity(margin-bottom, 1.5rem);
+    @include portrait-responsivity(margin-bottom, 1.4rem);
   }
 
   &__desc {
