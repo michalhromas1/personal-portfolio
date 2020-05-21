@@ -146,7 +146,11 @@
 
   "notifications": {
     "available": "V současnosti <strong>přijímám</strong> nové klienty",
-    "close--title": "Zavřít notifikaci"
+    "close--title": "Zavřít notifikaci",
+    "form": {
+      "success": "Super! <br class='hidden--landscape'>Zpráva úspěšně odeslána",
+      "error": "Něco se pokazilo, <br class='hidden--landscape'>zpráva nebyla odeslána"
+    }
   },
 
   "error": {

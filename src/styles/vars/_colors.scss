@@ -45,4 +45,9 @@ $c-notification__success--bg: $c-green;
 $c-notification__success--close: $c-white--d2;
 $c-notification__success--close-bg: $c-green--d1;
 
+$c-notification__error: $c-white;
+$c-notification__error--bg: $c-red;
+$c-notification__error--close: $c-white;
+$c-notification__error--close-bg: darken($c-red, 25);
+
 $c-404-title__desc: $c-white--d4;
