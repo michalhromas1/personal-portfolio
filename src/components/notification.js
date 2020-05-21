@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { injectIntl } from "gatsby-plugin-intl"
 
 class Notification extends Component {
+  duration = 500
+
   state = {
     hide: false,
   }
@@ -11,7 +13,7 @@ class Notification extends Component {
     this.setState({ hide: true })
     setTimeout(() => {
       this.props.hidden()
-    }, 500)
+    }, this.duration)
   }
 
   render() {
@@ -23,7 +25,10 @@ class Notification extends Component {
     classList += delay ? ` notification--delay` : ""
     classList += hide ? " notification--hide" : ""
     return (
-      <div className={classList}>
+      <div
+        className={classList}
+        style={{ animationDuration: `${this.duration}ms` }}
+      >
         <p
           className="notification__text"
           dangerouslySetInnerHTML={{
