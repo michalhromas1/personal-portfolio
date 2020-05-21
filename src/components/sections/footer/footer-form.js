@@ -12,6 +12,7 @@ class FooterForm extends Component {
       success: false,
       error: false,
     },
+    submitting: false,
   }
 
   encode = data => {
@@ -22,6 +23,7 @@ class FooterForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
+    this.setState({ submitting: true })
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -29,6 +31,10 @@ class FooterForm extends Component {
     })
       .then(() => this.notify())
       .catch(() => this.notify(true))
+      .finally(() => {
+        this.resetForm()
+        this.setState({ submitting: false })
+      })
   }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value })
@@ -49,9 +55,13 @@ class FooterForm extends Component {
     this.setState({ notification })
   }
 
+  resetForm = () => {
+    this.setState({ name: "", email: "", phone: "" })
+  }
+
   render() {
     const { intl } = this.props
-    const { name, email, phone, message, notification } = this.state
+    const { name, email, phone, message, notification, submitting } = this.state
     const { success, error } = notification
     return (
       <div>
@@ -109,6 +119,7 @@ class FooterForm extends Component {
               name="email"
               id="email"
               value={email}
+              required
               onChange={this.handleChange}
             />
           </div>
@@ -118,7 +129,7 @@ class FooterForm extends Component {
             </label>
             <input
               className="footer-form__control"
-              type="text"
+              type="tel"
               placeholder={intl.formatMessage({ id: "footer.main.form.phone" })}
               name="phone"
               id="phone"
@@ -138,6 +149,7 @@ class FooterForm extends Component {
               name="message"
               id="message"
               value={message}
+              required
               onChange={this.handleChange}
             ></textarea>
           </div>
@@ -148,6 +160,7 @@ class FooterForm extends Component {
               title={intl.formatMessage({
                 id: "footer.main.form.submit.title",
               })}
+              disabled={submitting}
             >
               {intl.formatMessage({ id: "footer.main.form.submit.text" })}
             </button>
