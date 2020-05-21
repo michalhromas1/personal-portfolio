@@ -5,6 +5,7 @@ import Call from "./../../../images/svg/call.svg"
 import Envelope from "./../../../images/svg/envelope.svg"
 import Money from "./../../../images/svg/money.svg"
 import LinkedIn from "./../../../images/svg/linkedin.svg"
+import GitHub from "./../../../images/svg/github.svg"
 
 const FooterMain = () => {
   const intl = useIntl()
@@ -28,14 +29,16 @@ const FooterMain = () => {
                     <img
                       className="footer-main__contacts-icon"
                       src={Call}
-                      alt="todo"
+                      alt={intl.formatMessage({
+                        id: "footer.main.contacts.phone.icon--alt",
+                      })}
                     />
                   </div>
                   <p
                     className="footer-main__contacts-text"
                     dangerouslySetInnerHTML={{
                       __html: intl.formatMessage({
-                        id: "footer.main.contacts.phone",
+                        id: "footer.main.contacts.phone.text",
                       }),
                     }}
                   ></p>
@@ -45,14 +48,16 @@ const FooterMain = () => {
                     <img
                       className="footer-main__contacts-icon"
                       src={Envelope}
-                      alt="todo"
+                      alt={intl.formatMessage({
+                        id: "footer.main.contacts.email.icon--alt",
+                      })}
                     />
                   </div>
                   <p
                     className="footer-main__contacts-text"
                     dangerouslySetInnerHTML={{
                       __html: intl.formatMessage({
-                        id: "footer.main.contacts.email",
+                        id: "footer.main.contacts.email.text",
                       }),
                     }}
                   ></p>
@@ -62,14 +67,35 @@ const FooterMain = () => {
                     <img
                       className="footer-main__contacts-icon"
                       src={Money}
-                      alt="todo"
+                      alt={intl.formatMessage({
+                        id: "footer.main.contacts.rate.icon--alt",
+                      })}
                     />
                   </div>
                   <p
                     className="footer-main__contacts-text"
                     dangerouslySetInnerHTML={{
                       __html: intl.formatMessage({
-                        id: "footer.main.contacts.rate",
+                        id: "footer.main.contacts.rate.text",
+                      }),
+                    }}
+                  ></p>
+                </li>
+                <li className="footer-main__contacts-item footer-main__contacts-item--github">
+                  <div className="footer-main__contacts-icon-wrapper">
+                    <img
+                      className="footer-main__contacts-icon"
+                      src={GitHub}
+                      alt={intl.formatMessage({
+                        id: "footer.main.contacts.github.icon--alt",
+                      })}
+                    />
+                  </div>
+                  <p
+                    className="footer-main__contacts-text"
+                    dangerouslySetInnerHTML={{
+                      __html: intl.formatMessage({
+                        id: "footer.main.contacts.github.text",
                       }),
                     }}
                   ></p>
@@ -79,14 +105,16 @@ const FooterMain = () => {
                     <img
                       className="footer-main__contacts-icon"
                       src={LinkedIn}
-                      alt="todo"
+                      alt={intl.formatMessage({
+                        id: "footer.main.contacts.linkedin.icon--alt",
+                      })}
                     />
                   </div>
                   <p
                     className="footer-main__contacts-text"
                     dangerouslySetInnerHTML={{
                       __html: intl.formatMessage({
-                        id: "footer.main.contacts.linkedin",
+                        id: "footer.main.contacts.linkedin.text",
                       }),
                     }}
                   ></p>
