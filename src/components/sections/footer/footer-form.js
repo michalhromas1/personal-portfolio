@@ -8,7 +8,6 @@ class FooterForm extends Component {
     email: "",
     phone: "",
     message: "",
-    submitted: false,
     notification: {
       success: false,
       error: false,
@@ -39,7 +38,15 @@ class FooterForm extends Component {
       success: !isError,
       error: isError,
     }
-    this.setState({ submitted: true, notification })
+    this.setState({ notification })
+  }
+
+  handleNotificationHidden = e => {
+    const notification = {
+      success: false,
+      error: false,
+    }
+    this.setState({ notification })
   }
 
   render() {
@@ -56,6 +63,7 @@ class FooterForm extends Component {
               }),
               type: "success",
             }}
+            hidden={this.handleNotificationHidden}
           />
         )}
         {error && (
@@ -66,6 +74,7 @@ class FooterForm extends Component {
               }),
               type: "error",
             }}
+            hidden={this.handleNotificationHidden}
           />
         )}
         <form
